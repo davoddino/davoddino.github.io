@@ -1,0 +1,445 @@
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#titoloDavid {
+    color: white;
+text-align: center;
+line-height: 1200px;
+font-size: 80pt;
+}
+
+#mainpage{
+    height: 1100px;
+    background-image:url(facciadavid.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 0px;
+}
+#musica{
+    width: calc(100%-40px);
+    height: 250px;
+    padding: 20px;
+}
+
+.preview{
+    height: 500px;
+    width: 36%;
+    background-color: black;
+    float: left;
+    border-radius: 10%;
+    color: white;
+    font-size: 140px;
+    line-height: 5px;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 3%;
+}
+.content{
+    text-align: center;
+    height: 500px;
+    width: 59%;
+    float: right;
+    background-image: url(IMG_8647.jpg);
+    background-size: cover;
+    border-radius: 10%;
+}
+
+#miaMusica {
+    text-align: center;
+    font-size: 100px;
+    margin-bottom: 40px;
+}
+.titoloMusica {
+    border-top: 20px solid grey;
+    background-image: url(IMG_0227.JPG);
+    height: 800px;
+    color: white;
+    padding: 0%;
+    align-items: center;
+}
+#instabile {
+    color: white;
+    background-image: url(IMG_7345.jpg);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+    margin-top: 10px;
+}
+a {
+    text-decoration-line: none;
+}
+#sopraStelle {
+    color: white;
+    background-image: url(IMG_3002.jpg);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: right;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+    margin-top: 10px;
+
+
+}
+.canzoni {
+    display: flex;
+    border: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+nav {
+    background-color: grey;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    float: fixed;
+    border-bottom: 4px solid rgb(99, 99, 99);
+
+}
+
+nav ul {
+    list-style: none;
+    display:inline-block;
+}
+
+
+nav p {
+    color: white;
+}
+
+#linkCanzoni {
+    display: inline-flex;
+}
+
+#miaStoria {
+    text-align: center;
+    padding-top: 50px;
+}
+
+#MiaStoria {
+    background-color: rgb(29, 98, 75);
+    height: 600px;
+    color: white;
+    border-top: 6px solid white;
+    justify-items: center;
+}
+
+#foto1 {
+    background-image: url(davidgrosso.jpg);
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    margin-left: 50px;
+    border-radius: 10%;
+}
+
+#testo1Storia   {
+    margin-left: 320px;
+    width: 310px;
+    margin-right: 20px;
+}
+
+#box1canzoni {
+    background-image: url(IMG_7504.JPEG);
+    background-size: cover;
+    height: 1200px;
+    color: white;
+    padding-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 1px solid white;
+}
+
+#InstabileCanzoni {
+    background-image: url(IMG_7345.jpg);
+    height: 100px;
+    border-radius: 5%;
+    width: 100px;
+    background-size: cover;
+    margin-left: 5%;
+    margin-top: 30px;
+}
+
+#titoloInstabile {
+    float: left;
+    font-size: 30px;
+}
+
+#descrizioneInstabile   {
+    font-size: 15px;
+    float: left;
+    display: flex;
+    margin-left: 15%;
+    margin-top: 40px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#boxInstabile {
+    padding-bottom: 30px;
+    border-bottom: 1px solid white;
+    display: flex;
+    flex-direction: column;
+}
+
+#titoloLeMieCanzoni {
+    color: white;
+    margin-top: 20px;
+}
+
+.LaMiaStoria {
+    font-size: cover;
+    font-size: 140px;
+    margin: 0px;
+}
+
+#titoloFollowMe {
+    color: black;
+    text-align: center;
+    padding-top: 0px;
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 100px;
+}
+
+#followOnSpotify {
+    background-image: url(IMG_0964.JPG);
+    background-size: cover;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px; 
+}
+
+#followMeYoutube {
+    background-image: url(yt.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px; 
+
+}
+
+#boxFollowMe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+#followApple {
+    background-image: url(am.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+#followAmazon {
+    background-image: url(Ajpeg.jpeg);
+    background-size: cover;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+#followInsta {
+    background-image: url(instagram.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+#followTwitter  {
+    background-image: url(Twitter.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+#boxFotoInstabile{
+    height: 100px;
+    width: 100px;
+    margin-left:50px ;
+}
+#boxTitoloInstabile {
+    float: right;
+    width: 80%;
+}
+#TitoloDavid {
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    padding-top: 15%;
+    font-size: 200px;
+    display: block;
+    width: 100%;
+}
+.tondiFollow {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#miniBoxInstabile {
+    background-color: antiquewhite;
+    width: 150px;
+    height: 200px;
+    border-radius: 20%;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 3%;
+    margin-right: 3%;
+
+}
+#instabileScritta {
+    font-size: 25px;
+    margin-top: 200px;
+    color: black;
+}
+#miniBoxSopralestelle {
+    background-color: antiquewhite;
+    width: 150px;
+    height: 200px;
+    border-radius: 20%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+#BoxBoxCanzoni {
+    display: columns;
+    padding-bottom: 40px;
+}
+#SopraLeStelleScritta {
+    font-size: 25px;
+    margin-top: 200px;
+    color: black;
+}
+#scrittaDavidFine {
+    font-size: 10px;
+    margin-left: 2px;
+    margin-bottom: 3px;
+}
+#BoxFotoInstabileCanzoni {
+    height: 100px;
+    width: 100px;
+    margin: 3%;
+}
+#FotoInstabileInCanzoni {
+    height: 100px;
+    width: 100px;
+    background-image: url(IMG_7345.jpg);
+    background-size: cover;
+    border-radius: 10%;
+}
+#instabileInCanzoni {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(24, 40, 77, 0.629);
+    background-size: cover;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+#TitoloInstabileCanzoni {
+    font-size: 30px;
+    margin-right: 40px;
+    margin-left: 30px;
+}
+#descrizioneInstabileCanzoni {
+    font-size: 15px;
+}
+#BoxDescrizioneInstabileCanzoni {
+    display: flex;
+    flex-direction: left;
+}
+#sopraLeStelleInCanzoni {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(24, 40, 77, 0.398);
+    background-size: cover;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+#TitoloSopraLeStelleCanzoni {
+    font-size: 30px;
+    margin-right: 40px;
+    margin-left: 30px;
+}
+#BoxDescrizioneSopraLeStelleCanzoni {
+    display: flex;
+    flex-direction: left;
+}
+#descrizioneSopraLeStelleCanzoni {
+    font-size: 15px;
+}
+#FotoSopraLeStelleInCanzoni {
+    height: 100px;
+    width: 100px;
+    background-image: url(IMG_3002.jpg);
+    background-size: cover;
+    border-radius: 10%;
+}
+#BoxFotoSopraLeStelleCanzoni {
+    height: 100px;
+    width: 100px;
+    margin: 3%;
+    flex-direction: left;
+    display: left;
+}
+#BoxNuoveCanzoni {
+    height: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#TitoloAeroplaniNuove {
+    display: flex;
+    margin-left: 20px;
+    font-size: 30px;
+}
+#Box2NuoveCanzoni {
+    width: 100%;
+}
+#TitoloNuove {
+    display: flex;
+    justify-content: center;
+}
+#BoxAeroplaniNuove {
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#DescrizioneAeroplaniNuove{
+    padding-top: 20px;
+    padding-left: 3%;
+}
