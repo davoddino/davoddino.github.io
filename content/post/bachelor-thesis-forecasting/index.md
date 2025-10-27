@@ -1,25 +1,12 @@
 ---
 title: "🎓 Bachelor Thesis · Forecasting Tourist Flows with Machine Learning"
 date: 2024-06-09T10:00:00+02:00
+layout: ireland-story
 caption: "Exploring how cities breathe through data."
-period: "Oct 2023 – May 2024"
-supervisors:
-  - name: "Sara Migliorini"
-    role: "Supervisor"
-  - name: "Elisa Quintarelli"
-    role: "Co-supervisor"
-  - name: "Alessandro Farinelli"
-    role: "Co-supervisor"
-focus:
-  - "Temporal forecasting"
-  - "Synthetic data privacy"
-  - "Model interpretability"
-tools:
-  - "Python"
-  - "PyTorch"
-  - "scikit-learn"
-  - "Pandas"
-  - "NumPy"
+heroImage: "thesis-flow.svg"
+heroAlt: "Illustration of temporal signals over a city grid"
+heroCredit: "Custom graphic"
+description: "Machine learning models for forecasting tourist flows with privacy-aware, synthetic datasets."
 draft: false
 ---
 
@@ -33,3 +20,17 @@ Under the guidance of Sara Migliorini (supervisor) and Elisa Quintarelli and Ale
 It became an exercise in precision, interpretation, and scientific discipline. The experience taught me how data can reflect the rhythm of human movement.
 
 ⸻
+
+**Period:** Oct 2023 – May 2024  
+**Supervisors:** Sara Migliorini, Elisa Quintarelli, Alessandro Farinelli  
+
+**Focus Areas**
+
+- Temporal forecasting  
+- Synthetic data privacy  
+- Model interpretability  
+
+**Tools**
+
+- Python, Pandas, NumPy  
+- PyTorch, scikit-learn  

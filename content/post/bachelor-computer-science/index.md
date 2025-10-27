@@ -1,29 +1,11 @@
 ---
 title: "Bachelor in Computer Science · University of Verona (2022–2025)"
 date: 2024-06-08T10:00:00+02:00
-layout: bachelor-story
+layout: ireland-story
 caption: "From zero code to computational fluency."
 heroImage: "verona-campus.jpg"
 heroAlt: "Evening light on a modern campus building"
 description: "Three years of scientific foundations, system design, and community-driven growth."
-tagline: "From zero code to computational fluency."
-curriculum:
-  - title: "Foundations"
-    items:
-      - Mathematics & Physics
-      - Logic & Discrete Structures
-      - Probability & Statistics
-  - title: "Systems"
-    items:
-      - Algorithms & Data Structures
-      - Operating Systems
-      - Computer Networks
-  - title: "Software"
-    items:
-      - Databases & SQL
-      - Software Engineering
-      - Signal Processing & AI
-callout: "It was more than a degree. It was a transformation from curiosity into craft."
 draft: false
 ---
 
@@ -38,3 +20,11 @@ Two close friends walked the whole path with me: countless nights of debugging, 
 It was more than a degree. It was a transformation from curiosity into craft.
 
 ⸻
+
+## Curriculum Highlights
+
+- **Foundations:** Mathematics & Physics, Logic & Discrete Structures, Probability & Statistics  
+- **Systems:** Algorithms & Data Structures, Operating Systems, Computer Networks  
+- **Software:** Databases & SQL, Software Engineering, Signal Processing & AI  
+
+> This journey turned curiosity into craft and gave me the confidence to keep building.
