@@ -1,0 +1,64 @@
+{{ define "body-class" }}
+    bachelor-story-page
+{{ end }}
+
+{{ define "left-sidebar" }}{{ end }}
+{{ define "right-sidebar" }}{{ end }}
+
+{{ define "main" }}
+    <article class="bachelor-story">
+        <div class="bachelor-story__grid">
+            <aside class="bachelor-story__timeline">
+                <p class="bachelor-story__period">{{ .Date.Format "2006" }} · {{ with .Params.dateEnd }}{{ . }}{{ else }}{{ now.Format "2006" }}{{ end }}</p>
+                <h2>{{ .Title }}</h2>
+                {{ with .Params.caption }}<p class="bachelor-story__caption">{{ . }}</p>{{ end }}
+                {{ with .Params.curriculum }}
+                    <div class="bachelor-story__curriculum">
+                        {{ range . }}
+                            <section>
+                                <h3>{{ .title }}</h3>
+                                <ul>
+                                    {{ range .items }}<li>{{ . }}</li>{{ end }}
+                                </ul>
+                            </section>
+                        {{ end }}
+                    </div>
+                {{ end }}
+            </aside>
+            <div class="bachelor-story__content">
+                {{ with .Params.heroImage }}
+                    {{ $hero := $.Resources.GetMatch . }}
+                    <figure>
+                        {{ if $hero }}
+                            <img src="{{ $hero.RelPermalink }}" alt="{{ $.Params.heroAlt | default $.Title }}" loading="lazy" />
+                        {{ else }}
+                            <img src="{{ . | relURL }}" alt="{{ $.Params.heroAlt | default $.Title }}" loading="lazy" />
+                        {{ end }}
+                    </figure>
+                {{ end }}
+                <div class="bachelor-story__text">
+                    {{ .Content }}
+                </div>
+                {{ with .Params.callout }}
+                    <div class="bachelor-story__callout">
+                        {{ . }}
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </article>
+
+    {{ if .Params.links }}
+        {{ partial "article/components/links" . }}
+    {{ end }}
+
+    {{ partial "article/components/related-content" . }}
+
+    {{ if not (eq .Params.comments false) }}
+        {{ partial "comments/include" . }}
+    {{ end }}
+
+    {{ partialCached "footer/footer" . }}
+
+    {{ partialCached "article/components/photoswipe" . }}
+{{ end }}

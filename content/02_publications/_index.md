@@ -3,6 +3,7 @@ title: "Publications"
 date: 2022-03-06
 slug: "publications"
 description: "My publications"
+draft: true
 menu:
     main:
     

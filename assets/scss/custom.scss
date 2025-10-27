@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&display=swap");
+
+body.ireland-story-page {
+  font-family: "IBM Plex Serif", "Iowan Old Style", Georgia, serif;
+  background: radial-gradient(circle at 10% 20%, #172233 0%, #0d121b 55%, #080b11 100%);
+  color: #f5f1eb;
+}
+
+body.ireland-story-page .container.main-container {
+  justify-content: center;
+  padding-block: 4rem;
+}
+
+body.ireland-story-page .main.full-width {
+  width: 100%;
+  max-width: 960px;
+  padding: 0 1.5rem;
+}
+
+.ireland-story {
+  display: flex;
+  justify-content: center;
+}
+
+.ireland-story__inner {
+  width: 100%;
+  max-width: 720px;
+  padding: 3.25rem;
+  background: linear-gradient(145deg, rgba(18, 26, 39, 0.92), rgba(10, 15, 22, 0.97));
+  border-radius: 32px;
+  border: 1px solid rgba(133, 176, 255, 0.16);
+  box-shadow:
+    0 35px 70px rgba(0, 0, 0, 0.6),
+    inset 0 0 60px rgba(63, 99, 191, 0.06);
+}
+
+.ireland-story__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ireland-story__timeline {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+  color: rgba(245, 241, 235, 0.6);
+}
+
+.ireland-story__header h1 {
+  font-size: 2.65rem;
+  margin-bottom: 0.75rem;
+  color: #fdfbf7;
+}
+
+.ireland-story__caption {
+  font-size: 1rem;
+  color: rgba(245, 241, 235, 0.75);
+}
+
+.ireland-story__figure {
+  margin: 0 0 2.5rem;
+}
+
+.ireland-story__figure img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(133, 176, 255, 0.2);
+}
+
+.ireland-story__figure figcaption {
+  font-size: 0.75rem;
+  margin-top: 0.6rem;
+  text-align: right;
+  color: rgba(245, 241, 235, 0.55);
+}
+
+.ireland-story__content {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ireland-story__content p {
+  margin: 0;
+  color: rgba(249, 246, 240, 0.92);
+}
+
+@media (max-width: 640px) {
+  body.ireland-story-page .container.main-container {
+    padding-block: 2rem;
+  }
+
+  .ireland-story__inner {
+    border-radius: 20px;
+    padding: 2.25rem;
+  }
+
+  .ireland-story__header h1 {
+    font-size: 2.2rem;
+  }
+
+  .ireland-story__timeline {
+    letter-spacing: 0.15em;
+  }
+}
+
+body.bachelor-story-page {
+  font-family: "IBM Plex Serif", "Iowan Old Style", Georgia, serif;
+  background: #050607;
+  color: #f2f2f2;
+}
+
+body.bachelor-story-page .container.main-container {
+  justify-content: center;
+  padding-block: 4rem;
+}
+
+body.bachelor-story-page .main.full-width {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 1.5rem;
+}
+
+.bachelor-story {
+  display: flex;
+  justify-content: center;
+}
+
+.bachelor-story__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+  gap: 3rem;
+  background: linear-gradient(130deg, rgba(16, 19, 26, 0.98), rgba(6, 7, 11, 0.95));
+  border-radius: 32px;
+  padding: clamp(2rem, 3vw, 3rem);
+  border: 1px solid rgba(255, 199, 94, 0.1);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+.bachelor-story__timeline {
+  border-right: 1px solid rgba(255, 199, 94, 0.1);
+  padding-right: 2rem;
+}
+
+.bachelor-story__period {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: rgba(242, 242, 242, 0.6);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.bachelor-story__timeline h2 {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.bachelor-story__caption {
+  color: rgba(242, 242, 242, 0.75);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.bachelor-story__curriculum section + section {
+  margin-top: 1.5rem;
+}
+
+.bachelor-story__curriculum h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 199, 94, 0.85);
+  margin-bottom: 0.5rem;
+}
+
+.bachelor-story__curriculum ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.bachelor-story__curriculum li {
+  color: rgba(242, 242, 242, 0.8);
+}
+
+.bachelor-story__content figure {
+  margin: 0 0 2rem;
+}
+
+.bachelor-story__content img {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 199, 94, 0.12);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+}
+
+.bachelor-story__text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: rgba(250, 248, 245, 0.92);
+}
+
+.bachelor-story__callout {
+  margin-top: 2rem;
+  padding: 1.75rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 199, 94, 0.3);
+  background: rgba(255, 199, 94, 0.08);
+  color: #ffe2a4;
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .bachelor-story__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .bachelor-story__timeline {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 199, 94, 0.1);
+    padding-right: 0;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+body.bachelor-story-page .container.main-container {
+  padding-block: 2rem;
+}
+
+.bachelor-story__grid {
+  border-radius: 20px;
+  padding: 1.75rem;
+}
+
+.quantum-wave {
+  margin-top: 1.5rem;
+  border: 1px solid rgba(116, 209, 255, 0.25);
+  border-radius: 18px;
+  padding: 1.5rem;
+  background: radial-gradient(circle at 30% 30%, rgba(90, 147, 255, 0.12), transparent 65%),
+    rgba(5, 8, 15, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-wave__line {
+  height: 2px;
+  width: 120%;
+  background: linear-gradient(90deg, transparent, #8ae3ff, transparent);
+  margin-bottom: 1.1rem;
+  position: relative;
+  left: -10%;
+  animation: quantum-wave-flow 6s ease-in-out infinite;
+}
+
+.quantum-wave__line:nth-child(2) {
+  animation-delay: -1.5s;
+  opacity: 0.7;
+}
+
+.quantum-wave__line:nth-child(3) {
+  animation-delay: -3s;
+  opacity: 0.45;
+}
+
+@keyframes quantum-wave-flow {
+  0% {
+    transform: translateX(-10%) scaleY(0.8);
+  }
+  50% {
+    transform: translateX(10%) scaleY(1.6);
+  }
+  100% {
+    transform: translateX(-10%) scaleY(0.8);
+  }
+}
+}
