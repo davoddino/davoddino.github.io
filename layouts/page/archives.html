@@ -1,0 +1,58 @@
+{{ define "body-class" }}ireland-story-page template-archives{{ end }}
+{{ define "left-sidebar" }}{{ end }}
+{{ define "right-sidebar" }}{{ end }}
+
+{{ define "main" }}
+    <article class="ireland-story">
+        <div class="ireland-story__inner">
+            {{ $date := .Date }}
+            {{ $timeline := cond (gt $date.Unix 0) ($date.Format "02 MMMM 2006") (now.Format "02 MMMM 2006") }}
+            <header class="ireland-story__header">
+                <p class="ireland-story__timeline">{{ $timeline }}</p>
+                <h1>{{ .Title }}</h1>
+                {{ with (or .Params.caption .Params.description) }}<p class="ireland-story__caption">{{ . }}</p>{{ end }}
+            </header>
+
+            <div class="ireland-story__content archives-content">
+                {{- $taxonomy := $.Site.GetPage "taxonomyTerm" "categories" -}}
+                {{- $terms := $taxonomy.Pages -}}
+                {{ if $terms }}
+                    <section class="archives-taxonomy">
+                        <h2>Categorie</h2>
+                        <div class="archives-taxonomy__grid">
+                            {{ range $terms }}
+                                <a class="archives-taxonomy__chip" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            {{ end }}
+                        </div>
+                    </section>
+                {{ end }}
+
+                {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+                {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+                {{ $filtered := ($pages | intersect $notHidden) }}
+
+                {{ range $filtered.GroupByDate "2006" }}
+                    {{ $id := lower (replace .Key " " "-") }}
+                    <section class="archives-section" id="{{ $id }}">
+                        <h2><a href="{{ $.RelPermalink }}#{{ $id }}">{{ .Key }}</a></h2>
+                        <div class="archives-section__list">
+                            {{ range .Pages }}
+                                <a class="story-list-card story-list-card--compact" href="{{ .RelPermalink }}">
+                                    <div class="story-list-card__meta">
+                                        <time>{{ .Date.Format "02 MMM" }}</time>
+                                    </div>
+                                    <div class="story-list-card__body">
+                                        <h2>{{ .Title }}</h2>
+                                        {{ with .Params.caption }}<p>{{ . }}</p>{{ end }}
+                                    </div>
+                                </a>
+                            {{ end }}
+                        </div>
+                    </section>
+                {{ end }}
+            </div>
+        </div>
+    </article>
+
+    {{ partialCached "footer/footer" . }}
+{{ end }}

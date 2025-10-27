@@ -1,6 +1,4 @@
-{{ define "body-class" }}
-    ireland-story-page
-{{ end }}
+{{ define "body-class" }}ireland-story-page{{ end }}
 
 {{ define "left-sidebar" }}{{ end }}
 {{ define "right-sidebar" }}{{ end }}
@@ -13,7 +11,7 @@
             <header class="ireland-story__header">
                 <p class="ireland-story__timeline">{{ $timeline }}</p>
                 <h1>{{ .Title }}</h1>
-                {{ with .Params.caption }}<p class="ireland-story__caption">{{ . }}</p>{{ end }}
+                {{ with (or .Params.caption .Params.description) }}<p class="ireland-story__caption">{{ . }}</p>{{ end }}
             </header>
             {{ with .Params.heroImage }}
                 {{ $hero := $.Resources.GetMatch . }}

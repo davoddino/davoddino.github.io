@@ -105,6 +105,186 @@ body.ireland-story-page .main.full-width {
   font-style: italic;
 }
 
+.ireland-story__content--list {
+  gap: 2rem;
+}
+
+.story-list-card {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.75rem 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(133, 176, 255, 0.18);
+  background: rgba(12, 18, 30, 0.65);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.story-list-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(148, 211, 255, 0.45);
+  box-shadow: 0 25px 55px rgba(0, 22, 51, 0.5);
+}
+
+.story-list-card__meta {
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(210, 227, 255, 0.6);
+}
+
+.story-list-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.story-list-card__body h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #fdfcf9;
+}
+
+.story-list-card__body p {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(233, 240, 255, 0.78);
+}
+
+.story-list-card--compact {
+  padding: 1.5rem 1.75rem;
+}
+
+@media (max-width: 720px) {
+  .story-list-card {
+    flex-direction: column;
+    padding: 1.5rem 1.6rem;
+  }
+
+  .story-list-card__meta {
+    min-width: unset;
+    justify-content: flex-start;
+  }
+
+  .story-list-card__body h2 {
+    font-size: 1.4rem;
+  }
+}
+
+.archives-content {
+  gap: 2.5rem;
+}
+
+.archives-taxonomy h2,
+.archives-section h2 {
+  margin: 0;
+  color: #fdfcf9;
+  font-size: 1.35rem;
+}
+
+.archives-taxonomy__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.archives-taxonomy__chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(133, 176, 255, 0.16);
+  color: rgba(224, 235, 255, 0.85);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.archives-taxonomy__chip:hover {
+  background: rgba(148, 211, 255, 0.35);
+}
+
+.archives-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.archives-section h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.archives-section__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-content {
+  gap: 2rem;
+}
+
+.story-search {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 18px;
+  border: 1px solid rgba(133, 176, 255, 0.2);
+  background: rgba(10, 14, 24, 0.65);
+}
+
+.story-search p {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.story-search label {
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(210, 227, 255, 0.7);
+}
+
+.story-search input {
+  border: 1px solid rgba(133, 176, 255, 0.35);
+  border-radius: 12px;
+  padding: 0.65rem 0.9rem;
+  background: rgba(7, 10, 18, 0.7);
+  color: #fdfcf9;
+}
+
+.story-search button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 12px;
+  border: 1px solid rgba(133, 176, 255, 0.3);
+  background: linear-gradient(135deg, rgba(65, 120, 210, 0.7), rgba(32, 65, 140, 0.9));
+  color: #fdfcf9;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.story-search button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(14, 43, 90, 0.45);
+}
+
+.search-result--title {
+  color: rgba(210, 227, 255, 0.75);
+}
+
 @media (max-width: 640px) {
   body.ireland-story-page .container.main-container {
     padding-block: 2rem;
