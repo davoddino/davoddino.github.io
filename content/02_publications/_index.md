@@ -4,7 +4,7 @@ date: 2022-03-06
 slug: "publications"
 description: "My publications"
 draft: true
-_build:
+build:
   list: never
   render: never
 ---
