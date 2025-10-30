@@ -1,0 +1,45 @@
+{{ define "body-class" }}
+    ireland-story-page
+{{ end }}
+
+{{ define "left-sidebar" }}{{ end }}
+{{ define "right-sidebar" }}{{ end }}
+
+{{ define "main" }}
+    <article class="ireland-story">
+        <div class="ireland-story__inner">
+            {{ $date := .Date }}
+            {{ $timeline := cond (gt $date.Unix 0) ($date.Format "02 MMMM 2006") (now.Format "02 MMMM 2006") }}
+            <header class="ireland-story__header">
+                <p class="ireland-story__timeline">{{ $timeline }}</p>
+                <h1>{{ .Title }}</h1>
+                {{ with (or .Params.caption .Params.description) }}<p class="ireland-story__caption">{{ . }}</p>{{ end }}
+            </header>
+            <div class="ireland-story__content ireland-story__content--list">
+                {{ $pages := .Pages }}
+                {{ if .IsHome }}
+                    {{ $pages = where site.RegularPages "Type" "post" }}
+                {{ end }}
+                {{ $paginator := .Paginate (sort $pages "Date" "desc") }}
+                {{ range $paginator.Pages }}
+                    <a class="story-list-card" href="{{ .RelPermalink }}">
+                        <div class="story-list-card__meta">
+                            <time>{{ .Date.Format "02 MMM 2006" }}</time>
+                        </div>
+                        <div class="story-list-card__body">
+                            <h2>{{ .Title }}</h2>
+                            {{ with .Params.caption }}
+                                <p>{{ . }}</p>
+                            {{ else }}
+                                {{ with .Summary }}<p>{{ . | plainify }}</p>{{ end }}
+                            {{ end }}
+                        </div>
+                    </a>
+                {{ end }}
+            </div>
+            {{ partial "pagination.html" . }}
+        </div>
+    </article>
+
+    {{ partialCached "footer/footer" . }}
+{{ end }}

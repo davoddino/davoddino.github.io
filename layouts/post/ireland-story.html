@@ -1,0 +1,48 @@
+{{ define "body-class" }}
+    ireland-story-page
+{{ end }}
+
+{{ define "left-sidebar" }}{{ end }}
+{{ define "right-sidebar" }}{{ end }}
+
+{{ define "main" }}
+    <article class="ireland-story">
+        <div class="ireland-story__inner">
+            {{ $date := .Date }}
+            {{ $timeline := cond (gt $date.Unix 0) ($date.Format "02 MMMM 2006") (now.Format "02 MMMM 2006") }}
+            <header class="ireland-story__header">
+                <p class="ireland-story__timeline">{{ $timeline }}</p>
+                <h1>{{ .Title }}</h1>
+                {{ with .Params.caption }}<p class="ireland-story__caption">{{ . }}</p>{{ end }}
+            </header>
+            {{ with .Params.heroImage }}
+                {{ $hero := $.Resources.GetMatch . }}
+                <figure class="ireland-story__figure">
+                    {{ if $hero }}
+                        <img src="{{ $hero.RelPermalink }}" alt="{{ $.Params.heroAlt | default $.Title }}" loading="lazy" />
+                    {{ else }}
+                        <img src="{{ . | relURL }}" alt="{{ $.Params.heroAlt | default $.Title }}" loading="lazy" />
+                    {{ end }}
+                    {{ with $.Params.heroCredit }}<figcaption>{{ . }}</figcaption>{{ end }}
+                </figure>
+            {{ end }}
+            <div class="ireland-story__content">
+                {{ .Content }}
+            </div>
+        </div>
+    </article>
+
+    {{ if .Params.links }}
+        {{ partial "article/components/links" . }}
+    {{ end }}
+
+    {{ partial "article/components/related-content" . }}
+
+    {{ if not (eq .Params.comments false) }}
+        {{ partial "comments/include" . }}
+    {{ end }}
+
+    {{ partialCached "footer/footer" . }}
+
+    {{ partialCached "article/components/photoswipe" . }}
+{{ end }}

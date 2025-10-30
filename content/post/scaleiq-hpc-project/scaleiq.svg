@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sq-bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#030712" />
+      <stop offset="60%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1d1e3a" />
+    </linearGradient>
+    <linearGradient id="sq-line" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
+    </linearGradient>
+    <radialGradient id="sq-pulse" cx="0.3" cy="0.35" r="0.6">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#sq-bg)" />
+  <rect width="1200" height="720" fill="url(#sq-pulse)" opacity="0.7" />
+  <g fill="#312e81" opacity="0.45">
+    <circle cx="260" cy="180" r="150" />
+    <circle cx="980" cy="520" r="220" />
+    <circle cx="640" cy="360" r="140" />
+  </g>
+  <g fill="none" stroke="url(#sq-line)" stroke-width="6">
+    <path d="M140 400 L340 360 L540 440 L740 380 L940 440" />
+    <path d="M140 480 L340 440 L540 520 L740 460 L940 520" opacity="0.6" />
+    <path d="M140 560 L340 520 L540 600 L740 540 L940 600" opacity="0.4" />
+  </g>
+  <g fill="#c7d2fe" opacity="0.45">
+    <rect x="260" y="260" width="240" height="150" rx="30" />
+    <rect x="520" y="200" width="200" height="130" rx="30" opacity="0.6" />
+    <rect x="800" y="300" width="200" height="120" rx="28" opacity="0.5" />
+  </g>
+</svg>

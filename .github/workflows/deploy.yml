@@ -6,16 +6,16 @@ on:
     pull_request:
         branches: [master]
 
-permissions:       # Aggiunta dei permessi per l'id-token
+permissions:
+    contents: write  # Necessario per push su gh-pages
     id-token: write
-    contents: read
 
 jobs:
     build:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v4
 
             - name: Cache Hugo resources
               uses: actions/cache@v3
@@ -31,7 +31,7 @@ jobs:
             - run: go version
 
             - name: Cache Go Modules
-              uses: actions/cache@v2
+              uses: actions/cache@v4
               with:
                   path: |
                       ~/.cache/go-build
@@ -56,4 +56,4 @@ jobs:
                   folder: public
                   clean: true
                   single-commit: true
-                  token: ${{ secrets.ACTIONS_DEPLOY_KEY }}  # Secret per l'autenticazione
+                  token: ${{ secrets.GITHUB_TOKEN }}  # Usa il token automatico

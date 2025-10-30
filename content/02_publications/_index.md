@@ -3,12 +3,10 @@ title: "Publications"
 date: 2022-03-06
 slug: "publications"
 description: "My publications"
-menu:
-    main:
-    
-        weight: 2
-        params: 
-            icon: certificate
+draft: true
+build:
+  list: never
+  render: never
 ---
 
 Nothing here yet, but I am cooking!

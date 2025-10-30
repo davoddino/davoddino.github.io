@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="70%" stop-color="#1f2937" />
+      <stop offset="100%" stop-color="#0b1120" />
+    </linearGradient>
+    <linearGradient id="pulse" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0" />
+      <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)" />
+  <g opacity="0.5">
+    <circle cx="220" cy="160" r="160" fill="#312e81" />
+    <circle cx="1040" cy="520" r="220" fill="#1d4ed8" />
+  </g>
+  <g fill="none" stroke="url(#pulse)" stroke-width="6">
+    <path d="M120 480 L240 360 L360 420 L480 300 L600 360 L720 240 L840 300 L960 180 L1080 240" />
+    <path d="M120 540 L240 420 L360 480 L480 360 L600 420 L720 300 L840 360 L960 240 L1080 300" opacity="0.6" />
+    <path d="M120 600 L240 480 L360 540 L480 420 L600 480 L720 360 L840 420 L960 300 L1080 360" opacity="0.4" />
+  </g>
+  <g fill="#dbeafe" opacity="0.4">
+    <circle cx="360" cy="540" r="24" />
+    <circle cx="600" cy="420" r="28" />
+    <circle cx="840" cy="360" r="20" />
+  </g>
+</svg>
