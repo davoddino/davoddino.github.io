@@ -15,7 +15,7 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v4
 
             - name: Cache Hugo resources
               uses: actions/cache@v3
@@ -31,7 +31,7 @@ jobs:
             - run: go version
 
             - name: Cache Go Modules
-              uses: actions/cache@v2
+              uses: actions/cache@v4
               with:
                   path: |
                       ~/.cache/go-build
