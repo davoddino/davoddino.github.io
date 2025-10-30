@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CINECA on David Cavada</title><link>https://davoddino.github.io/tags/cineca/</link><description>Recent content in CINECA on David Cavada</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 28 Oct 2024 20:21:13 +0200</lastBuildDate><atom:link href="https://davoddino.github.io/tags/cineca/index.xml" rel="self" type="application/rss+xml"/><item><title>EPICURE Hackathon - October 2024</title><link>https://davoddino.github.io/03_projects/epicure-hackathon-2024/</link><pubDate>Mon, 28 Oct 2024 20:21:13 +0200</pubDate><guid>https://davoddino.github.io/03_projects/epicure-hackathon-2024/</guid><description>&lt;img src="https://davoddino.github.io/03_projects/epicure-hackathon-2024/cover.jpg" alt="Featured image of post EPICURE Hackathon - October 2024" /&gt;&lt;p&gt;The &lt;strong&gt;EPICURE Hackathon&lt;/strong&gt;, held from October 28-31, 2024, brought together developers, researchers, and enthusiasts from across Europe to dive deep into the world of &lt;strong&gt;GPU programming and high-performance computing (HPC)&lt;/strong&gt;. This event was hosted in collaboration with &lt;strong&gt;CINECA&lt;/strong&gt;, one of the leading HPC centers in Europe, renowned for its contributions to scientific computing and advanced research.&lt;/p&gt;
+&lt;p&gt;The hackathon was meticulously structured, featuring both hands-on labs and theoretical sessions, designed to empower participants with the latest skills in &lt;strong&gt;CUDA programming&lt;/strong&gt;, &lt;strong&gt;OpenACC&lt;/strong&gt;, and &lt;strong&gt;GPU optimization techniques&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="day-1-getting-started-with-gpu-computing"&gt;Day 1: Getting Started with GPU Computing
+&lt;/h2&gt;&lt;p&gt;The first day served as an introduction to GPU computing, aimed at setting a strong foundation. Topics included:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Introduction to GPU Computing:&lt;/strong&gt; A look into the architecture and advantages of using GPUs for high-performance tasks.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CUDA Basics:&lt;/strong&gt; Practical insights into CUDA, NVIDIA&amp;rsquo;s parallel computing platform, providing a gateway to harnessing the power of GPU cores.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The agenda for Day 1 was as follows:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Time&lt;/th&gt;
+&lt;th&gt;Session&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;9:00 - 9:15&lt;/td&gt;
+&lt;td&gt;Welcome and Registration&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9:15 - 9:30&lt;/td&gt;
+&lt;td&gt;EPICURE HPC Application Support for EuroHPC Users&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9:30 - 10:30&lt;/td&gt;
+&lt;td&gt;Introduction to GPU Computing&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10:30 - 11:00&lt;/td&gt;
+&lt;td&gt;Coffee Break&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11:00 - 12:30&lt;/td&gt;
+&lt;td&gt;Introduction to CUDA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12:30 - 14:00&lt;/td&gt;
+&lt;td&gt;Lunch&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14:00 - 15:30&lt;/td&gt;
+&lt;td&gt;OpenACC Programming and Profiling with Nsight&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15:30 - 16:00&lt;/td&gt;
+&lt;td&gt;Coffee Break&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16:00 - 17:30&lt;/td&gt;
+&lt;td&gt;OpenACC Programming and Profiling with Nsight&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Images from Day 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://davoddino.github.io/03_projects/epicure-hackathon-2024/1.jpg"
+width="8064"
+height="6048"
+srcset="https://davoddino.github.io/03_projects/epicure-hackathon-2024/1_hu_2e2c7b65e389b21a.jpg 480w, https://davoddino.github.io/03_projects/epicure-hackathon-2024/1_hu_4d80a9452c69c81.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+&gt;&lt;/p&gt;
+&lt;h2 id="day-2-advanced-gpu-optimization-and-profiling"&gt;Day 2: Advanced GPU Optimization and Profiling
+&lt;/h2&gt;&lt;p&gt;Day 2 took things to the next level, focusing on &lt;strong&gt;advanced GPU optimization and profiling techniques&lt;/strong&gt;. Participants were guided through various optimization methods to fine-tune GPU applications, reducing computation time and maximizing efficiency.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Time&lt;/th&gt;
+&lt;th&gt;Session&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;9:00 - 10:30&lt;/td&gt;
+&lt;td&gt;Advanced GPU Optimization and Profiling&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10:30 - 11:00&lt;/td&gt;
+&lt;td&gt;Coffee Break&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11:00 - 12:30&lt;/td&gt;
+&lt;td&gt;Advanced GPU Optimization and Profiling (Continued)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12:30 - 14:00&lt;/td&gt;
+&lt;td&gt;Lunch&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14:00 - 17:30&lt;/td&gt;
+&lt;td&gt;Lab Session (with your code or a provided code)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The hands-on lab in the afternoon provided an opportunity to implement what we learned using real-world examples, supported by the CINECA team.&lt;/p&gt;
+&lt;h2 id="day-3-4-intensive-lab-sessions"&gt;Day 3-4: Intensive Lab Sessions
+&lt;/h2&gt;&lt;p&gt;The last two days were dedicated to &lt;strong&gt;intensive lab sessions&lt;/strong&gt;. Participants worked on challenging GPU computing projects, with mentors available to provide guidance and feedback. These sessions enabled us to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Test and debug our code using real-time feedback from experts.&lt;/li&gt;
+&lt;li&gt;Engage in peer-to-peer learning, exchanging ideas and optimizing our implementations.&lt;/li&gt;
+&lt;li&gt;Utilize &lt;strong&gt;Nsight&lt;/strong&gt; and other profiling tools to analyze performance and identify bottlenecks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Date&lt;/th&gt;
+&lt;th&gt;Morning (9:00 - 12:30)&lt;/th&gt;
+&lt;th&gt;Afternoon (14:00 - 17:30)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;October 30&lt;/td&gt;
+&lt;td&gt;Lab Session&lt;/td&gt;
+&lt;td&gt;Lab Session&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;October 31&lt;/td&gt;
+&lt;td&gt;Lab Session&lt;/td&gt;
+&lt;td&gt;Lab Session&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Images from Days 3 and 4:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://davoddino.github.io/03_projects/epicure-hackathon-2024/2.jpg"
+width="8064"
+height="6048"
+srcset="https://davoddino.github.io/03_projects/epicure-hackathon-2024/2_hu_5c947c449eff9d43.jpg 480w, https://davoddino.github.io/03_projects/epicure-hackathon-2024/2_hu_42193b71430f6f9e.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+&gt;&lt;/p&gt;
+&lt;h2 id="key-takeaways"&gt;Key Takeaways
+&lt;/h2&gt;&lt;p&gt;This hackathon was more than just a technical event; it was a community-building experience. Here are some of the main takeaways:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Networking:&lt;/strong&gt; I had the opportunity to connect with like-minded individuals passionate about GPU programming and HPC.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learning New Tools:&lt;/strong&gt; From CUDA basics to advanced profiling with &lt;strong&gt;Nsight&lt;/strong&gt;, I gained hands-on experience with cutting-edge tools.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Real-World Problem Solving:&lt;/strong&gt; The projects and examples we tackled were grounded in real-world applications, highlighting the impact of GPU acceleration in domains like scientific research, machine learning, and data analysis.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="final-thoughts"&gt;Final Thoughts
+&lt;/h2&gt;&lt;p&gt;Reflecting on these four days, I feel a renewed enthusiasm for &lt;strong&gt;GPU computing&lt;/strong&gt; and &lt;strong&gt;HPC&lt;/strong&gt;. The skills I gained, combined with the amazing people I met, made this hackathon an unforgettable experience.&lt;/p&gt;
+&lt;p&gt;Interested in learning more? Check out the links below to access more details on EPICURE events, a recap video, and the GitHub repository with sample codes used during the hackathon.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://epicure-hpc.eu" target="_blank" rel="noopener"
+&gt;EPICURE HPC Event Page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.youtube.com/watch?v=EPICURE_hackathon2024" target="_blank" rel="noopener"
+&gt;Event Recap Video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/EPICURE-hackathon-2024/sample-codes" target="_blank" rel="noopener"
+&gt;GitHub Repository of Sample Codes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;This hackathon has certainly sparked a deeper interest in exploring the potential of GPUs for high-performance tasks. I’m looking forward to applying these skills in future projects and sharing my insights with the community.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://davoddino.github.io/03_projects/epicure-hackathon-2024/3.jpg"
+width="8064"
+height="6048"
+srcset="https://davoddino.github.io/03_projects/epicure-hackathon-2024/3_hu_a2c071e8f749aa7b.jpg 480w, https://davoddino.github.io/03_projects/epicure-hackathon-2024/3_hu_78f457af8363af36.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+&gt;&lt;/p&gt;</description></item></channel></rss>

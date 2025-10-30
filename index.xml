@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Whoami on David Cavada</title><link>https://davoddino.github.io/</link><description>Recent content in Whoami on David Cavada</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Jun 2024 10:00:00 +0200</lastBuildDate><atom:link href="https://davoddino.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>EPICURE Hackathon - October 2024</title><link>https://davoddino.github.io/03_projects/epicure-hackathon-2024/</link><pubDate>Mon, 28 Oct 2024 20:21:13 +0200</pubDate><guid>https://davoddino.github.io/03_projects/epicure-hackathon-2024/</guid><description>&lt;img src="https://davoddino.github.io/03_projects/epicure-hackathon-2024/cover.jpg" alt="Featured image of post EPICURE Hackathon - October 2024" /&gt;&lt;p&gt;The &lt;strong&gt;EPICURE Hackathon&lt;/strong&gt;, held from October 28-31, 2024, brought together developers, researchers, and enthusiasts from across Europe to dive deep into the world of &lt;strong&gt;GPU programming and high-performance computing (HPC)&lt;/strong&gt;. This event was hosted in collaboration with &lt;strong&gt;CINECA&lt;/strong&gt;, one of the leading HPC centers in Europe, renowned for its contributions to scientific computing and advanced research.&lt;/p&gt;
+&lt;p&gt;The hackathon was meticulously structured, featuring both hands-on labs and theoretical sessions, designed to empower participants with the latest skills in &lt;strong&gt;CUDA programming&lt;/strong&gt;, &lt;strong&gt;OpenACC&lt;/strong&gt;, and &lt;strong&gt;GPU optimization techniques&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="day-1-getting-started-with-gpu-computing"&gt;Day 1: Getting Started with GPU Computing
+&lt;/h2&gt;&lt;p&gt;The first day served as an introduction to GPU computing, aimed at setting a strong foundation. Topics included:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Introduction to GPU Computing:&lt;/strong&gt; A look into the architecture and advantages of using GPUs for high-performance tasks.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CUDA Basics:&lt;/strong&gt; Practical insights into CUDA, NVIDIA&amp;rsquo;s parallel computing platform, providing a gateway to harnessing the power of GPU cores.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The agenda for Day 1 was as follows:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Time&lt;/th&gt;
+&lt;th&gt;Session&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;9:00 - 9:15&lt;/td&gt;
+&lt;td&gt;Welcome and Registration&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9:15 - 9:30&lt;/td&gt;
+&lt;td&gt;EPICURE HPC Application Support for EuroHPC Users&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9:30 - 10:30&lt;/td&gt;
+&lt;td&gt;Introduction to GPU Computing&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10:30 - 11:00&lt;/td&gt;
+&lt;td&gt;Coffee Break&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11:00 - 12:30&lt;/td&gt;
+&lt;td&gt;Introduction to CUDA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12:30 - 14:00&lt;/td&gt;
+&lt;td&gt;Lunch&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14:00 - 15:30&lt;/td&gt;
+&lt;td&gt;OpenACC Programming and Profiling with Nsight&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15:30 - 16:00&lt;/td&gt;
+&lt;td&gt;Coffee Break&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16:00 - 17:30&lt;/td&gt;
+&lt;td&gt;OpenACC Programming and Profiling with Nsight&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Images from Day 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://davoddino.github.io/03_projects/epicure-hackathon-2024/1.jpg"
+width="8064"
+height="6048"
+srcset="https://davoddino.github.io/03_projects/epicure-hackathon-2024/1_hu_2e2c7b65e389b21a.jpg 480w, https://davoddino.github.io/03_projects/epicure-hackathon-2024/1_hu_4d80a9452c69c81.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+&gt;&lt;/p&gt;
+&lt;h2 id="day-2-advanced-gpu-optimization-and-profiling"&gt;Day 2: Advanced GPU Optimization and Profiling
+&lt;/h2&gt;&lt;p&gt;Day 2 took things to the next level, focusing on &lt;strong&gt;advanced GPU optimization and profiling techniques&lt;/strong&gt;. Participants were guided through various optimization methods to fine-tune GPU applications, reducing computation time and maximizing efficiency.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Time&lt;/th&gt;
+&lt;th&gt;Session&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;9:00 - 10:30&lt;/td&gt;
+&lt;td&gt;Advanced GPU Optimization and Profiling&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10:30 - 11:00&lt;/td&gt;
+&lt;td&gt;Coffee Break&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11:00 - 12:30&lt;/td&gt;
+&lt;td&gt;Advanced GPU Optimization and Profiling (Continued)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12:30 - 14:00&lt;/td&gt;
+&lt;td&gt;Lunch&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14:00 - 17:30&lt;/td&gt;
+&lt;td&gt;Lab Session (with your code or a provided code)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The hands-on lab in the afternoon provided an opportunity to implement what we learned using real-world examples, supported by the CINECA team.&lt;/p&gt;
+&lt;h2 id="day-3-4-intensive-lab-sessions"&gt;Day 3-4: Intensive Lab Sessions
+&lt;/h2&gt;&lt;p&gt;The last two days were dedicated to &lt;strong&gt;intensive lab sessions&lt;/strong&gt;. Participants worked on challenging GPU computing projects, with mentors available to provide guidance and feedback. These sessions enabled us to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Test and debug our code using real-time feedback from experts.&lt;/li&gt;
+&lt;li&gt;Engage in peer-to-peer learning, exchanging ideas and optimizing our implementations.&lt;/li&gt;
+&lt;li&gt;Utilize &lt;strong&gt;Nsight&lt;/strong&gt; and other profiling tools to analyze performance and identify bottlenecks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Date&lt;/th&gt;
+&lt;th&gt;Morning (9:00 - 12:30)&lt;/th&gt;
+&lt;th&gt;Afternoon (14:00 - 17:30)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;October 30&lt;/td&gt;
+&lt;td&gt;Lab Session&lt;/td&gt;
+&lt;td&gt;Lab Session&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;October 31&lt;/td&gt;
+&lt;td&gt;Lab Session&lt;/td&gt;
+&lt;td&gt;Lab Session&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Images from Days 3 and 4:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://davoddino.github.io/03_projects/epicure-hackathon-2024/2.jpg"
+width="8064"
+height="6048"
+srcset="https://davoddino.github.io/03_projects/epicure-hackathon-2024/2_hu_5c947c449eff9d43.jpg 480w, https://davoddino.github.io/03_projects/epicure-hackathon-2024/2_hu_42193b71430f6f9e.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+&gt;&lt;/p&gt;
+&lt;h2 id="key-takeaways"&gt;Key Takeaways
+&lt;/h2&gt;&lt;p&gt;This hackathon was more than just a technical event; it was a community-building experience. Here are some of the main takeaways:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Networking:&lt;/strong&gt; I had the opportunity to connect with like-minded individuals passionate about GPU programming and HPC.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learning New Tools:&lt;/strong&gt; From CUDA basics to advanced profiling with &lt;strong&gt;Nsight&lt;/strong&gt;, I gained hands-on experience with cutting-edge tools.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Real-World Problem Solving:&lt;/strong&gt; The projects and examples we tackled were grounded in real-world applications, highlighting the impact of GPU acceleration in domains like scientific research, machine learning, and data analysis.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="final-thoughts"&gt;Final Thoughts
+&lt;/h2&gt;&lt;p&gt;Reflecting on these four days, I feel a renewed enthusiasm for &lt;strong&gt;GPU computing&lt;/strong&gt; and &lt;strong&gt;HPC&lt;/strong&gt;. The skills I gained, combined with the amazing people I met, made this hackathon an unforgettable experience.&lt;/p&gt;
+&lt;p&gt;Interested in learning more? Check out the links below to access more details on EPICURE events, a recap video, and the GitHub repository with sample codes used during the hackathon.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://epicure-hpc.eu" target="_blank" rel="noopener"
+&gt;EPICURE HPC Event Page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.youtube.com/watch?v=EPICURE_hackathon2024" target="_blank" rel="noopener"
+&gt;Event Recap Video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/EPICURE-hackathon-2024/sample-codes" target="_blank" rel="noopener"
+&gt;GitHub Repository of Sample Codes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;This hackathon has certainly sparked a deeper interest in exploring the potential of GPUs for high-performance tasks. I’m looking forward to applying these skills in future projects and sharing my insights with the community.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://davoddino.github.io/03_projects/epicure-hackathon-2024/3.jpg"
+width="8064"
+height="6048"
+srcset="https://davoddino.github.io/03_projects/epicure-hackathon-2024/3_hu_a2c071e8f749aa7b.jpg 480w, https://davoddino.github.io/03_projects/epicure-hackathon-2024/3_hu_78f457af8363af36.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+&gt;&lt;/p&gt;</description></item><item><title>EPICURE Hackathon · October 2024</title><link>https://davoddino.github.io/p/epicure-hackathon-october-2024/</link><pubDate>Mon, 28 Oct 2024 09:00:00 +0200</pubDate><guid>https://davoddino.github.io/p/epicure-hackathon-october-2024/</guid><description>&lt;p&gt;The EPICURE Hackathon, held from October 28–31, 2024, brought together developers, researchers, and enthusiasts from across Europe to dive deep into the world of GPU programming and high-performance computing (HPC). Hosted in collaboration with CINECA, one of the continent’s leading HPC centers, the event mixed theoretical sessions with hands-on labs so every participant could apply CUDA, OpenACC, and optimization concepts immediately.&lt;/p&gt;
+&lt;h2 id="day-1--getting-started-with-gpu-computing"&gt;Day 1 · Getting Started with GPU Computing
+&lt;/h2&gt;&lt;p&gt;The opening day focused on foundations—GPU architecture, parallelism, and NVIDIA’s CUDA platform—paired with profiling introductions in Nsight.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Agenda&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;09:00 – 09:15 · Welcome and registration&lt;/li&gt;
+&lt;li&gt;09:15 – 09:30 · EPICURE HPC application support for EuroHPC users&lt;/li&gt;
+&lt;li&gt;09:30 – 10:30 · Introduction to GPU computing&lt;/li&gt;
+&lt;li&gt;10:30 – 11:00 · Coffee break&lt;/li&gt;
+&lt;li&gt;11:00 – 12:30 · Introduction to CUDA&lt;/li&gt;
+&lt;li&gt;12:30 – 14:00 · Lunch&lt;/li&gt;
+&lt;li&gt;14:00 – 15:30 · OpenACC programming and profiling with Nsight&lt;/li&gt;
+&lt;li&gt;15:30 – 16:00 · Coffee break&lt;/li&gt;
+&lt;li&gt;16:00 – 17:30 · OpenACC programming and profiling with Nsight&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="day-2--advanced-gpu-optimization-and-profiling"&gt;Day 2 · Advanced GPU Optimization and Profiling
+&lt;/h2&gt;&lt;p&gt;Day 2 raised the bar with advanced optimization strategies and deeper profiling sessions. The afternoon lab let me apply the methods directly on real codebases.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;09:00 – 10:30 · Advanced GPU optimization and profiling&lt;/li&gt;
+&lt;li&gt;10:30 – 11:00 · Coffee break&lt;/li&gt;
+&lt;li&gt;11:00 – 12:30 · Advanced GPU optimization and profiling (continued)&lt;/li&gt;
+&lt;li&gt;12:30 – 14:00 · Lunch&lt;/li&gt;
+&lt;li&gt;14:00 – 17:30 · Lab session (with our own code or sample projects)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="days-34--intensive-lab-immersion"&gt;Days 3–4 · Intensive Lab Immersion
+&lt;/h2&gt;&lt;p&gt;The final two days were dedicated entirely to labs. With mentors on hand, we iterated on GPU projects, debugged kernels, and compared performance metrics using Nsight and other tools.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;October 30:&lt;/strong&gt; Morning lab session · Afternoon lab session&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;October 31:&lt;/strong&gt; Morning lab session · Afternoon lab session&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="key-takeaways"&gt;Key Takeaways
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Networking&lt;/strong&gt; · Connected with GPU programmers, researchers, and EuroHPC teams.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learning new tools&lt;/strong&gt; · From CUDA basics to advanced Nsight workflows.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Real-world problem solving&lt;/strong&gt; · Tackled challenges grounded in scientific research, ML, and data analysis.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="final-thoughts"&gt;Final Thoughts
+&lt;/h2&gt;&lt;p&gt;Reflecting on these four days, I feel a renewed enthusiasm for GPU computing and HPC. The skills I gained, combined with the people I met, made this hackathon an unforgettable experience. I’m looking forward to applying what I learned in future projects and sharing insights with the community.&lt;/p&gt;
+&lt;h2 id="links"&gt;Links
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;EPICURE HPC Event Page&lt;/li&gt;
+&lt;li&gt;Event Recap Video&lt;/li&gt;
+&lt;li&gt;GitHub Repository of Sample Codes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Keywords&lt;/strong&gt; · GPU Computing · CUDA · High-Performance Computing · EPICURE · CINECA · Hackathon&lt;/p&gt;</description></item><item><title>Search</title><link>https://davoddino.github.io/search/</link><pubDate>Wed, 19 Jun 2024 10:00:00 +0200</pubDate><guid>https://davoddino.github.io/search/</guid><description/></item><item><title>Archives</title><link>https://davoddino.github.io/archives/</link><pubDate>Tue, 18 Jun 2024 10:00:00 +0200</pubDate><guid>https://davoddino.github.io/archives/</guid><description/></item><item><title>ScaleIQ · HPC Project with Cineca and Leonardo Supercomputer</title><link>https://davoddino.github.io/p/scaleiq-hpc-project-with-cineca-and-leonardo-supercomputer/</link><pubDate>Sun, 16 Jun 2024 10:00:00 +0200</pubDate><guid>https://davoddino.github.io/p/scaleiq-hpc-project-with-cineca-and-leonardo-supercomputer/</guid><description>&lt;p&gt;ScaleIQ is a collaborative project proposed by Nitin Shukla and developed in partnership with Cineca, leveraging the power of the Leonardo supercomputer.
+The goal is to build an intelligent assistant that simplifies and accelerates the process of bringing code and research projects onto high-performance computing systems.&lt;/p&gt;
+&lt;p&gt;ScaleIQ acts as a kind of Codex for HPC. It analyses repositories, identifies dependencies, loads the required modules, and automates compilation, environment setup, and job execution.
+It can interpret logs, diagnose common issues, and generate clear reports, reducing the technical overhead researchers face when scaling their work to supercomputing infrastructure.&lt;/p&gt;
+&lt;p&gt;My work focuses on designing and implementing the core orchestration logic — from module management and virtual environments to automatic job submission and error recovery.
+The project aims to make HPC systems more accessible, efficient, and adaptive for scientists and developers alike.&lt;/p&gt;
+&lt;p&gt;⸻&lt;/p&gt;</description></item><item><title>XR Development with Godot Engine and Meta Quest 3</title><link>https://davoddino.github.io/p/xr-development-with-godot-engine-and-meta-quest-3/</link><pubDate>Sat, 15 Jun 2024 10:00:00 +0200</pubDate><guid>https://davoddino.github.io/p/xr-development-with-godot-engine-and-meta-quest-3/</guid><description>&lt;p&gt;Curiosity about extended reality led me to explore the full capabilities of Godot Engine for Meta Quest 3, including passthrough rendering and mixed-reality interaction.
+I studied how the headset’s cameras, sensors, and coordinate systems operate, and how Godot’s XR architecture manages spatial mapping and tracking.&lt;/p&gt;
+&lt;p&gt;During this exploration, I developed VisualAnchors, a custom plugin that extends Godot with real-world anchoring through QR-code detection and pose estimation.
+The system uses a native OpenCV backend on Android to identify markers, estimate their 3D poses via IPPE (SOLVEPNP_IPPE_SQUARE), and project them into Godot’s XR space with smoothing filters such as One-Euro and SLERP.
+It provides a high-level VisualAnchorsManager API that allows developers to bind 3D nodes directly to real-world anchors, creating a seamless bridge between the physical and virtual environments.&lt;/p&gt;
+&lt;p&gt;This work gave me a deep understanding of how computer vision, geometry, and XR systems can merge into spatial computing.
+It also taught me the discipline of building cross-platform, performance-oriented tools that enable others to experiment and create.&lt;/p&gt;
+&lt;p&gt;🔗 VisualAnchors on GitHub&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://github.com/davoddino/visualanchors" target="_blank" rel="noopener"
+&gt;https://github.com/davoddino/visualanchors&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;⸻&lt;/p&gt;</description></item><item><title>💻 Programming Languages and Systems</title><link>https://davoddino.github.io/p/programming-languages-and-systems/</link><pubDate>Fri, 14 Jun 2024 10:00:00 +0200</pubDate><guid>https://davoddino.github.io/p/programming-languages-and-systems/</guid><description>&lt;p&gt;Over the years I have learned to move comfortably across different programming paradigms and environments, from low-level systems to high-level design.
+I began with C and C++, which taught me how computers truly work: memory, pointers, and the fine balance between control and abstraction.
+That understanding naturally led me to Assembly, a language I deeply enjoy for its precision and closeness to the machine.&lt;/p&gt;
+&lt;p&gt;From there, I expanded to Python, Java, JavaScript, and Dart, using them for data analysis, software development, and interactive applications.
+I also work with GDScript in Godot, building small interactive systems and experimenting with real-time logic.&lt;/p&gt;
+&lt;p&gt;A key part of my growth has been learning to program directly on GPUs.
+I have written and optimized kernels in CUDA and ROCm, exploring how parallel computation transforms both efficiency and intuition.
+Working close to the hardware gave me a deeper sense of structure, understanding computation not just as code but as energy and movement through silicon.&lt;/p&gt;
+&lt;p&gt;⸻&lt;/p&gt;</description></item><item><title>Discussions and Exploration on Gaussian Splatting</title><link>https://davoddino.github.io/p/discussions-and-exploration-on-gaussian-splatting/</link><pubDate>Thu, 13 Jun 2024 10:00:00 +0200</pubDate><guid>https://davoddino.github.io/p/discussions-and-exploration-on-gaussian-splatting/</guid><description>&lt;p&gt;Although my academic work followed a different path, I had the opportunity to learn deeply about Gaussian Splatting through my brother’s research and thesis on 3D reconstruction.
+He introduced me to the core principles behind radiance field representations, scene optimization, and differentiable rendering, which opened many fascinating conversations between us.&lt;/p&gt;
+&lt;p&gt;These discussions were not formal research, but they helped me understand how geometry, perception, and computation intertwine.
+Together, we explored ideas on data efficiency, rendering accuracy, and potential extensions of splatting beyond graphics, for example toward structure learning and spatial reasoning.&lt;/p&gt;
+&lt;p&gt;That exchange shaped my way of thinking: learning not only from study, but from dialogue, curiosity, and shared discovery.&lt;/p&gt;
+&lt;p&gt;⸻&lt;/p&gt;</description></item><item><title>Blockchain and Smart Contracts</title><link>https://davoddino.github.io/p/blockchain-and-smart-contracts/</link><pubDate>Wed, 12 Jun 2024 10:00:00 +0200</pubDate><guid>https://davoddino.github.io/p/blockchain-and-smart-contracts/</guid><description>&lt;p&gt;This course introduced the architecture and principles behind blockchain systems and their real-world applications.
+It explored the foundations of distributed ledgers, cryptographic validation methods, consensus algorithms, and transaction security.&lt;/p&gt;
+&lt;p&gt;Alongside the theory, I developed a smart contract on the Ethereum network, learning how decentralized logic can enforce trust and transparency without intermediaries.
+Through that experience, I gained a clear understanding of how consensus, incentives, and immutability converge to create reliable digital ecosystems.&lt;/p&gt;
+&lt;p&gt;Beyond its technical content, the course opened my perspective on how blockchain technologies can reshape governance, finance, and data ownership, and how code itself can become a form of agreement.&lt;/p&gt;
+&lt;p&gt;⸻&lt;/p&gt;</description></item><item><title>🤖 Artificial Intelligence</title><link>https://davoddino.github.io/p/artificial-intelligence/</link><pubDate>Tue, 11 Jun 2024 10:00:00 +0200</pubDate><guid>https://davoddino.github.io/p/artificial-intelligence/</guid><description>&lt;p&gt;During my second year, I attended the Artificial Intelligence course, which introduced me to the foundations of intelligent systems.
+It covered the essential principles behind agents, policies, rewards, and decision-making under uncertainty, as well as classical techniques for search, reasoning, and learning.&lt;/p&gt;
+&lt;p&gt;Although introductory, the course marked a turning point.
+It helped me understand how intelligence can emerge from structured rules and feedback, and how abstract mathematical models can produce adaptive behaviour.
+That realization shaped much of my later curiosity and influenced several of my independent projects, from forecasting models to agent-based systems.&lt;/p&gt;
+&lt;p&gt;What began as a simple course in logic and reward functions eventually became a doorway to a broader vision of cognition, learning, and simulation.&lt;/p&gt;
+&lt;p&gt;⸻&lt;/p&gt;</description></item><item><title>Exploring Quantum Physics and its Applications to Computing</title><link>https://davoddino.github.io/p/exploring-quantum-physics-and-its-applications-to-computing/</link><pubDate>Mon, 10 Jun 2024 10:00:00 +0200</pubDate><guid>https://davoddino.github.io/p/exploring-quantum-physics-and-its-applications-to-computing/</guid><description>&lt;p&gt;As part of the Quantum Physics course, I carried out an independent study titled “Quantum Physics Applied to Computer Science.”
+The work explored how fundamental principles of quantum mechanics, such as superposition and entanglement, open the door to new forms of computation, information processing, and reasoning.&lt;/p&gt;
+&lt;p&gt;The study began with the core physical concepts and gradually extended toward computational implications.
+I analyzed how quantum states enable parallel processing, how inference between quantum amplitudes determines constructive or destructive outcomes, and how logical operations are implemented through quantum gates like Hadamard, Pauli, CNOT, Toffoli, and Fredkin.
+I also examined quantum error correction codes (such as Shor and Steane), the no-cloning theorem, and algorithms by Shor and Grover that reveal the disruptive potential of quantum logic.&lt;/p&gt;
+&lt;p&gt;Beyond algorithms, the research touched on cryptography, quantum hardware technologies, and the social and philosophical implications of quantum theory.
+Topics included qubit architectures (superconducting, ion-trap, spin, topological, photonic), coherence challenges, and the broader ethical and societal effects of quantum computation on security, inequality, and knowledge.&lt;/p&gt;
+&lt;p&gt;This project gave me a holistic understanding of how quantum physics is not only a scientific field but a philosophical frontier.
+It made me aware that computation, at its deepest level, is a way of interpreting the nature of reality itself.&lt;/p&gt;
+&lt;p&gt;⸻&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;</description></item><item><title>🎓 Bachelor Thesis · Forecasting Tourist Flows with Machine Learning</title><link>https://davoddino.github.io/p/bachelor-thesis-forecasting-tourist-flows-with-machine-learning/</link><pubDate>Sun, 09 Jun 2024 10:00:00 +0200</pubDate><guid>https://davoddino.github.io/p/bachelor-thesis-forecasting-tourist-flows-with-machine-learning/</guid><description>&lt;p&gt;My thesis explored how machine learning models can predict tourist activity across points of interest using multi-year data from 2014 to 2022.
+The aim was to compare different forecasting architectures, from classical statistical methods to modern deep learning approaches, and analyze how each captures temporal dynamics, seasonality, and irregular patterns.&lt;/p&gt;
+&lt;p&gt;A key aspect of the project was preserving privacy while maintaining data realism through the creation of synthetic datasets.
+This led to experiments involving clustering techniques, temporal embeddings, and hybrid loss functions to assess model robustness and sensitivity.&lt;/p&gt;
+&lt;p&gt;Under the guidance of Sara Migliorini (supervisor) and Elisa Quintarelli and Alessandro Farinelli (co-supervisors), the project evolved into more than a technical benchmark.
+It became an exercise in precision, interpretation, and scientific discipline. The experience taught me how data can reflect the rhythm of human movement.&lt;/p&gt;
+&lt;p&gt;⸻&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Period:&lt;/strong&gt; Oct 2023 – May 2024&lt;br&gt;
+&lt;strong&gt;Supervisors:&lt;/strong&gt; Sara Migliorini, Elisa Quintarelli, Alessandro Farinelli&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Focus Areas&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Temporal forecasting&lt;/li&gt;
+&lt;li&gt;Synthetic data privacy&lt;/li&gt;
+&lt;li&gt;Model interpretability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python, Pandas, NumPy&lt;/li&gt;
+&lt;li&gt;PyTorch, scikit-learn&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Bachelor in Computer Science · University of Verona (2022–2025)</title><link>https://davoddino.github.io/p/bachelor-in-computer-science-university-of-verona-20222025/</link><pubDate>Sat, 08 Jun 2024 10:00:00 +0200</pubDate><guid>https://davoddino.github.io/p/bachelor-in-computer-science-university-of-verona-20222025/</guid><description>&lt;p&gt;When I started my degree in Computer Science at the University of Verona, I knew nothing about programming. I had never written a single line of code.
+Three years later, I find myself fluent in a language I once didn’t understand, not just coding but thinking computationally.&lt;/p&gt;
+&lt;p&gt;The program immersed me in mathematics, physics, and logic before moving into algorithms, software engineering, networks, operating systems, databases, and signal processing.
+Each subject opened a new layer of reasoning: from abstract algebra to system design, from the deterministic world of logic to the probabilistic nature of AI and data.&lt;/p&gt;
+&lt;p&gt;Beyond classes, life in the student residence shaped much of who I became. Surrounded by curious minds and diverse perspectives, I learned as much from people as from books.
+Two close friends walked the whole path with me: countless nights of debugging, discussing, laughing.
+It was more than a degree. It was a transformation from curiosity into craft.&lt;/p&gt;
+&lt;p&gt;⸻&lt;/p&gt;
+&lt;h2 id="curriculum-highlights"&gt;Curriculum Highlights
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Foundations:&lt;/strong&gt; Mathematics &amp;amp; Physics, Logic &amp;amp; Discrete Structures, Probability &amp;amp; Statistics&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Systems:&lt;/strong&gt; Algorithms &amp;amp; Data Structures, Operating Systems, Computer Networks&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Software:&lt;/strong&gt; Databases &amp;amp; SQL, Software Engineering, Signal Processing &amp;amp; AI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This journey turned curiosity into craft and gave me the confidence to keep building.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>🇮🇪 A Year in Ireland (2021–2022)</title><link>https://davoddino.github.io/p/a-year-in-ireland-20212022/</link><pubDate>Fri, 07 Jun 2024 10:00:00 +0200</pubDate><guid>https://davoddino.github.io/p/a-year-in-ireland-20212022/</guid><description>&lt;p&gt;In 2021 I moved to Ireland for my fourth year of high school, where I graduated with the Leaving Certificate.
+It was a demanding year. I had to catch up on all subjects from the Italian fifth year while adapting to a new education system, yet it became one of the most formative experiences of my life.&lt;/p&gt;
+&lt;p&gt;During those months, English stopped being a language I translated from. It became the language I thought in, a shift that changed how I reason, connect ideas, and express nuance.
+I spent much of my time studying, exploring literature, business, mathematics, biology, and German at higher level, but the learning extended far beyond the classroom.&lt;/p&gt;
+&lt;p&gt;Immersed in Irish culture and community, I joined a local Gaelic football club where my host brothers played. Though I didn’t play the sport myself, I trained regularly with the team and their coach, who deeply influenced my approach to discipline, movement, and physical growth.
+It was a period of quiet transformation: academic, physical, and personal, and it still shapes how I approach challenges today.&lt;/p&gt;</description></item><item><title>Internship at Wellround</title><link>https://davoddino.github.io/p/internship-at-wellround/</link><pubDate>Thu, 01 Feb 2024 09:00:00 +0100</pubDate><guid>https://davoddino.github.io/p/internship-at-wellround/</guid><description>&lt;p&gt;During my internship at Wellround I contributed significantly to the development of their platform from backend to frontend. I helped build LLM-based agents, the dashboard for university/ student management, the APIs for server ↔ mobile app communication, and the PostgreSQL database schema and queries.
+Working across the full stack, I gained hands-on experience with agent design, API architecture, data modelling, and production-ready systems in a startup environment.&lt;/p&gt;
+&lt;p&gt;My role included:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Designing and implementing REST/GraphQL endpoints to connect mobile clients and dashboard interfaces.&lt;/li&gt;
+&lt;li&gt;Developing and integrating LLM agents that assist students, analyse data, and provide insights.&lt;/li&gt;
+&lt;li&gt;Modelling the PostgreSQL schema for students, universities, sessions, analytics, and managing migrations and performance tuning.&lt;/li&gt;
+&lt;li&gt;Building the dashboard UI for administrators to manage users, view analytics, and trigger workflows.&lt;/li&gt;
+&lt;li&gt;Ensuring end-to-end data flows were secure, efficient, and scalable as the platform grew.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The internship taught me how to transform research-inspired ideas into working services, how to collaborate with product and design teams, and how to operate in a fast-paced startup setting.&lt;/p&gt;
+&lt;p&gt;⸻&lt;/p&gt;</description></item><item><title>Internship at Suggesto S.r.l.</title><link>https://davoddino.github.io/p/internship-at-suggesto-s.r.l./</link><pubDate>Sat, 01 Jul 2023 09:00:00 +0200</pubDate><guid>https://davoddino.github.io/p/internship-at-suggesto-s.r.l./</guid><description>&lt;p&gt;At Suggesto S.r.l., I developed an automated system for large-scale video processing, designed to handle hundreds of videos simultaneously.
+The system performs transcription, title generation, description writing, and summarization, combining speech recognition and large language models in a single workflow.&lt;/p&gt;
+&lt;p&gt;I integrated Whisper for accurate multilingual transcription and vLLM with Qwen 3.5 to generate coherent and context-aware metadata.
+The pipeline was built for efficiency, scalability, and clarity, helping the company speed up their internal content production process.&lt;/p&gt;
+&lt;p&gt;This project allowed me to combine AI research with real-world software engineering, bridging the gap between language models, automation, and creative media.&lt;/p&gt;
+&lt;p&gt;⸻&lt;/p&gt;</description></item><item><title>Winner — SFSCON Hackathon 2022 · Bolzano, Italy</title><link>https://davoddino.github.io/p/winner-sfscon-hackathon-2022-bolzano-italy/</link><pubDate>Tue, 15 Nov 2022 09:00:00 +0100</pubDate><guid>https://davoddino.github.io/p/winner-sfscon-hackathon-2022-bolzano-italy/</guid><description>&lt;p&gt;In November 2022, together with my team, I took part in the SFSCON Hackathon in Bolzano, where we won the competition with a project focused on smart logistics and automation.
+Our challenge was to design a fully autonomous system for managing textile logistics in hotels and vacation houses, including laundry, curtains, and carpets.&lt;/p&gt;
+&lt;p&gt;We built a prototype based on Arduino, capable of tracking each textile item throughout the facility.
+A connected mobile app allowed staff to monitor and update item data in real time, while a dashboard interface supported management with live analytics and recommendations for efficient operation.&lt;/p&gt;
+&lt;p&gt;The experience combined teamwork, creativity, and practical engineering.
+It showed how simple embedded systems, when paired with good design and coordination, can bring automation and intelligence into everyday processes.&lt;/p&gt;
+&lt;p&gt;⸻&lt;/p&gt;</description></item></channel></rss>
