@@ -6,9 +6,9 @@ on:
     pull_request:
         branches: [master]
 
-permissions:       # Aggiunta dei permessi per l'id-token
+permissions:
+    contents: write  # Necessario per push su gh-pages
     id-token: write
-    contents: read
 
 jobs:
     build:
@@ -56,4 +56,4 @@ jobs:
                   folder: public
                   clean: true
                   single-commit: true
-                  token: ${{ secrets.ACTIONS_DEPLOY_KEY }}  # Secret per l'autenticazione
+                  token: ${{ secrets.GITHUB_TOKEN }}  # Usa il token automatico
