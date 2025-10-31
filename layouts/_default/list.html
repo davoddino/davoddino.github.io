@@ -6,34 +6,64 @@
 {{ define "right-sidebar" }}{{ end }}
 
 {{ define "main" }}
+    {{ $rawPages := .Pages }}
+    {{ if .IsHome }}
+        {{ $rawPages = where site.RegularPages "Type" "post" }}
+    {{ end }}
+    {{ $filtered := sort $rawPages "Date" "desc" }}
+    {{ $total := len $filtered }}
+    {{ $session := substr (sha1 (printf "%s-%d" .Title $total)) 0 10 }}
+    {{ $paginator := .Paginate $filtered }}
+
     <article class="ireland-story">
         <div class="ireland-story__inner">
-            {{ $date := .Date }}
-            {{ $timeline := cond (gt $date.Unix 0) ($date.Format "02 MMMM 2006") (now.Format "02 MMMM 2006") }}
             <header class="ireland-story__header">
-                <p class="ireland-story__timeline">{{ $timeline }}</p>
-                <h1>{{ .Title }}</h1>
+                <div class="ireland-story__terminal">
+                    <div class="ireland-story__terminal-header">
+                        <span class="ireland-story__led ireland-story__led--red" aria-hidden="true"></span>
+                        <span class="ireland-story__led ireland-story__led--amber" aria-hidden="true"></span>
+                        <span class="ireland-story__led ireland-story__led--green" aria-hidden="true"></span>
+                        <span class="ireland-story__terminal-path">~/logs</span>
+                        <span class="ireland-story__terminal-hash">session: {{ $session }}</span>
+                    </div>
+                    <div class="ireland-story__terminal-body" aria-live="polite">
+                        <p><span class="ireland-story__prompt">$</span> list {{ .Title | urlize }}</p>
+                        <p><span class="ireland-story__arrow">↳</span> entries: {{ printf "%03d" $total }} · page {{ printf "%02d" $paginator.PageNumber }}/{{ printf "%02d" $paginator.TotalPages }}</p>
+                    </div>
+                </div>
+                <div class="ireland-story__meta">
+                    <span class="ireland-story__tag">total ▸ {{ $total }}</span>
+                    <span class="ireland-story__tag">page-size ▸ {{ $paginator.PageSize }}</span>
+                </div>
+                <h1 class="ireland-story__title">{{ .Title }}</h1>
                 {{ with (or .Params.caption .Params.description) }}<p class="ireland-story__caption">{{ . }}</p>{{ end }}
             </header>
-            <div class="ireland-story__content ireland-story__content--list">
-                {{ $pages := .Pages }}
-                {{ if .IsHome }}
-                    {{ $pages = where site.RegularPages "Type" "post" }}
-                {{ end }}
-                {{ $paginator := .Paginate (sort $pages "Date" "desc") }}
-                {{ range $paginator.Pages }}
-                    <a class="story-list-card" href="{{ .RelPermalink }}">
-                        <div class="story-list-card__meta">
-                            <time>{{ .Date.Format "02 MMM 2006" }}</time>
-                        </div>
-                        <div class="story-list-card__body">
-                            <h2>{{ .Title }}</h2>
-                            {{ with .Params.caption }}
-                                <p>{{ . }}</p>
-                            {{ else }}
-                                {{ with .Summary }}<p>{{ . | plainify }}</p>{{ end }}
+            <div class="log-catalog">
+                {{ $offset := mul (sub $paginator.PageNumber 1) $paginator.PageSize }}
+                {{ range $index, $page := $paginator.Pages }}
+                    {{ $logIndex := add $offset (add $index 1) }}
+                    {{ $hash := substr (sha1 $page.Title) 0 6 }}
+                    <a class="log-card" href="{{ $page.RelPermalink }}">
+                        <header class="log-card__header">
+                            <span class="log-card__id">log {{ printf "%03d" $logIndex }}</span>
+                            <span class="log-card__hash">ref {{ $hash }}</span>
+                        </header>
+                        <div class="log-card__meta">
+                            <time datetime="{{ $page.Date }}">{{ $page.Date.Format "02 Jan 2006" }}</time>
+                            {{ with $page.Params.tags }}
+                                {{ $tags := . }}
+                                {{ if gt (len $tags) 2 }}
+                                    {{ $tags = first 2 $tags }}
+                                {{ end }}
+                                <span class="log-card__tags">{{ delimit $tags " · " }}</span>
                             {{ end }}
                         </div>
+                        <h2 class="log-card__title">{{ $page.Title }}</h2>
+                        {{ with $page.Params.caption }}
+                            <p class="log-card__excerpt">{{ . }}</p>
+                        {{ else }}
+                            {{ with $page.Summary }}<p class="log-card__excerpt">{{ . | plainify | truncate 140 }}</p>{{ end }}
+                        {{ end }}
                     </a>
                 {{ end }}
             </div>

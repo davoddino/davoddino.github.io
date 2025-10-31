@@ -284,19 +284,30 @@ class Search {
     }
 
     public static render(item: pageData) {
-        return <article>
-            <a href={item.permalink}>
-                <div class="article-details">
-                    <h2 class="article-title" dangerouslySetInnerHTML={{ __html: item.title }}></h2>
-                    <section class="article-preview" dangerouslySetInnerHTML={{ __html: item.preview }}></section>
-                </div>
-                {item.image &&
-                    <div class="article-image">
-                        <img src={item.image} loading="lazy" />
-                    </div>
-                }
-            </a>
-        </article>;
+        const urlHash = btoa(item.permalink).replace(/[^a-zA-Z0-9]/g, '').substring(0, 6);
+        let formattedDate = '';
+        if (item.date) {
+            const parsedDate = new Date(item.date);
+            if (!isNaN(parsedDate.getTime())) {
+                formattedDate = parsedDate.toLocaleDateString('en-GB', {
+                    day: '2-digit',
+                    month: 'short',
+                    year: 'numeric'
+                });
+            }
+        }
+
+        return <a class="log-card log-card--compact search-log-card" href={item.permalink}>
+            <header class="log-card__header">
+                <span class="log-card__id">{formattedDate || 'no date'}</span>
+                <span class="log-card__hash">ref {urlHash}</span>
+            </header>
+            <div class="log-card__meta">
+                <span>matches {item.matchCount}</span>
+            </div>
+            <h3 class="log-card__title" dangerouslySetInnerHTML={{ __html: item.title }}></h3>
+            <p class="log-card__excerpt" dangerouslySetInnerHTML={{ __html: item.preview }}></p>
+        </a>;
     }
 }
 
@@ -310,7 +321,7 @@ window.addEventListener('load', () => {
     setTimeout(function () {
         const searchForm = document.querySelector('.search-form') as HTMLFormElement,
             searchInput = searchForm.querySelector('input') as HTMLInputElement,
-            searchResultList = document.querySelector('.search-result--list') as HTMLDivElement,
+            searchResultList = document.querySelector('.search-result__list') as HTMLDivElement,
             searchResultTitle = document.querySelector('.search-result--title') as HTMLHeadingElement;
 
         new Search({

@@ -1,46 +1,387 @@
-{{ define "body-class" }}ireland-story-page{{ end }}
+{{ define "body-class" }}home-quantum{{ end }}
 
 {{ define "left-sidebar" }}{{ end }}
 {{ define "right-sidebar" }}{{ end }}
 
 {{ define "main" }}
-    <article class="ireland-story">
-        <div class="ireland-story__inner">
-            {{ $date := .Date }}
-            {{ $timeline := cond (gt $date.Unix 0) ($date.Format "02 MMMM 2006") (now.Format "02 MMMM 2006") }}
-            <header class="ireland-story__header">
-                <p class="ireland-story__timeline">{{ $timeline }}</p>
-                <h1>{{ .Title }}</h1>
-                {{ with (or .Params.caption .Params.description) }}<p class="ireland-story__caption">{{ . }}</p>{{ end }}
-            </header>
-            {{ with .Params.heroImage }}
-                {{ $hero := $.Resources.GetMatch . }}
-                <figure class="ireland-story__figure">
-                    {{ if $hero }}
-                        <img src="{{ $hero.RelPermalink }}" alt="{{ $.Params.heroAlt | default $.Title }}" loading="lazy" />
-                    {{ else }}
-                        <img src="{{ . | relURL }}" alt="{{ $.Params.heroAlt | default $.Title }}" loading="lazy" />
-                    {{ end }}
-                    {{ with $.Params.heroCredit }}<figcaption>{{ . }}</figcaption>{{ end }}
-                </figure>
-            {{ end }}
-            <div class="ireland-story__content">
-                {{ .Content }}
+    {{ $defaultCapabilities := slice
+        (dict "title" "Signal Analysis" "description" "Models, pipelines, and dashboards tuned for decisions at scale." "keywords" (slice "HPC" "ML Ops" "Workflow Design"))
+        (dict "title" "Immersive Computation" "description" "XR tooling and spatial interfaces that translate data into interaction." "keywords" (slice "XR" "Real-Time" "Embodied UI"))
+        (dict "title" "Story-Driven Systems" "description" "Narratives woven into products, installations, and technical documentation." "keywords" (slice "Narrative Design" "Cultural Ops" "Knowledge Graphs"))
+    }}
+    {{ $capabilities := or .Params.capabilities $defaultCapabilities }}
+
+    {{ $experiencePages := (where .Site.RegularPages "Section" "post") }}
+    {{ $experiencePages = first 5 (sort $experiencePages "Date" "desc") }}
+    {{ $allLogs := len (where .Site.RegularPages "Section" "post") }}
+    {{ $sessionID := substr (sha1 (printf "%s-%s" .Title .Date)) 0 12 }}
+
+    <main class="home-cosmos">
+        <section class="home-hero" id="top" data-node="root">
+            <div class="home-hero__background" aria-hidden="true">
+                <div class="home-hero__layer home-hero__layer--matrix"></div>
+                <div class="home-hero__layer home-hero__layer--scanlines"></div>
+                <button class="home-hero__portal" type="button" aria-label="Hidden sequence" title="trace://Δcavada?"></button>
             </div>
+            <div class="home-hero__content">
+                <div class="home-hero__terminal">
+                    <div class="home-hero__terminal-header">
+                        <span class="home-hero__led home-hero__led--red" aria-hidden="true"></span>
+                        <span class="home-hero__led home-hero__led--amber" aria-hidden="true"></span>
+                        <span class="home-hero__led home-hero__led--green" aria-hidden="true"></span>
+                        <span class="home-hero__session">session: 0x{{ $sessionID }}</span>
+                        <span class="home-hero__clock">{{ now.Format "15:04:05 UTC" }}</span>
+                    </div>
+                    <div class="home-hero__terminal-body" aria-live="polite">
+                        <p><span class="home-hero__prompt">~/cavada</span><span class="home-hero__caret">$</span> init --scope portfolio</p>
+                        <p><span class="home-hero__arrow">↳</span> status: linked nodes active · listening for handshake</p>
+                    </div>
+                </div>
+                <span class="home-hero__eyebrow">access granted ▸ node: david.cavada</span>
+                <h1 class="home-hero__title">{{ .Title }}</h1>
+                {{ with (or .Params.caption .Params.description) }}
+                    <p class="home-hero__description">{{ . }}</p>
+                {{ end }}
+                <div class="home-hero__actions">
+                    <a class="home-button home-button--primary" href="#capabilities">inspect modules()</a>
+                    <a class="home-button home-button--ghost" href="#chronicle">view dossier</a>
+                </div>
+                <div class="home-hero__stats">
+                    <div class="home-hero__stat">
+                        <span class="home-hero__stat-label">focus</span>
+                        <span class="home-hero__stat-value">ai · xr · hpc</span>
+                    </div>
+                    <div class="home-hero__stat">
+                        <span class="home-hero__stat-label">mode</span>
+                        <span class="home-hero__stat-value">system design</span>
+                    </div>
+                    <div class="home-hero__stat">
+                        <span class="home-hero__stat-label">current</span>
+                        <span class="home-hero__stat-value">mixed research / production</span>
+                    </div>
+                </div>
+                <div class="home-hero__diagnostics" aria-hidden="true">
+                    <span>[sys] handshake ▸ stable</span>
+                    <span>[env] source ~/matrix/init.sh</span>
+                    <span>[hint] click the portal dot twice</span>
+                </div>
+                <div class="home-hero__binary" aria-hidden="true">
+                    <span>01001000</span>
+                    <span>01100101</span>
+                    <span>01101100</span>
+                    <span>01101100</span>
+                    <span>01101111</span>
+                </div>
+                <div class="home-hero__notes">
+                    <span data-code="lab">notebook: XR-memory-map.md</span>
+                    <span data-code="queue">build queue: {{ len (where .Site.RegularPages "Section" "projects") }} assets</span>
+                    <span data-code="secret">secret: try ↑ ↑ ↓ ↓ ← → ← → b a</span>
+                </div>
+            </div>
+            <aside class="home-hero__console" aria-label="Realtime registry">
+                <span class="home-hero__console-label">recent signals</span>
+                <div class="home-hero__console-grid">
+                    <span>c++ · go · python</span>
+                    <span>leonardo supercomputer</span>
+                    <span>godot xr toolkits</span>
+                    <span>ai research ops</span>
+                    <span>hackathon prototyping</span>
+                    <span>story architectures</span>
+                </div>
+            </aside>
+        </section>
+
+        <div class="home-divider" aria-hidden="true">
+            <span class="home-divider__label">/capabilities/</span>
         </div>
-    </article>
+        <section class="home-modules" id="capabilities">
+            <header class="home-section-header">
+                <span class="home-section-label">capability map</span>
+                <h2>active modules</h2>
+                <p>Layers of practice tracked as discrete systems, continuously tuned and redeployed.</p>
+            </header>
+            <div class="home-modules__grid">
+                    {{ range $index, $module := $capabilities }}
+                        {{ $checksum := substr (sha1 $module.title) 0 6 }}
+                        {{ $target := $module.link }}
+                        {{ if not $target }}
+                            {{ $target = printf "/search/?keyword=%s" ($module.title | urlquery) }}
+                        {{ end }}
+                        <a class="module-card" href="{{ $target }}">
+                            <div class="module-card__head">
+                                <span class="module-card__id">module {{ printf "%02d" (add $index 1) }}</span>
+                                <span class="module-card__checksum">hash {{ $checksum }}</span>
+                            </div>
+                            <div class="module-card__content">
+                                <h3>{{ $module.title }}</h3>
+                                <p>{{ $module.description }}</p>
+                            {{ with $module.keywords }}
+                                <ul class="module-card__tags">
+                                    {{ range . }}
+                                        <li>{{ . }}</li>
+                                    {{ end }}
+                                </ul>
+                            {{ end }}
+                        </div>
+                        <footer class="module-card__footer" aria-hidden="true">
+                            <span>↗ open module</span>
+                        </footer>
+                        </a>
+                    {{ end }}
+                </div>
+                <p class="home-modules__legend">/ hint: override modules via front matter `capabilities` with `title`, `description`, `keywords`, `link` keys.</p>
+        </section>
 
-    {{ if .Params.links }}
-        {{ partial "article/components/links" . }}
-    {{ end }}
+        {{ if gt (len $experiencePages) 0 }}
+            <div class="home-divider" aria-hidden="true">
+                <span class="home-divider__label">/logs/</span>
+            </div>
+            <section class="home-experiences" id="experiences">
+                <header class="home-section-header">
+                    <span class="home-section-label">log buffer</span>
+                    <h2>latest commits</h2>
+                    <p>Most recent deployments across research, product, and experimental spaces.</p>
+                </header>
+                <div class="home-experiences__rail">
+                    {{ range $idx, $entry := $experiencePages }}
+                        {{ $logHash := substr (sha1 $entry.Title) 0 5 }}
+                        <a class="experience-card" href="{{ $entry.RelPermalink }}">
+                            <header class="experience-card__header">
+                                <span class="experience-card__id">log {{ printf "%02d" (add $idx 1) }}</span>
+                                <span class="experience-card__hash">ref {{ $logHash }}</span>
+                            </header>
+                            <span class="experience-card__date">{{ $entry.Date.Format "02 Jan 2006" }}</span>
+                            <h3>{{ $entry.Title }}</h3>
+                            {{ $snippet := ($entry.Summary | plainify | truncate 120) }}
+                            {{ with $entry.Params.description }}
+                                {{ if gt (len .) 0 }}
+                                    {{ $snippet = . }}
+                                {{ end }}
+                            {{ end }}
+                            <p>{{ $snippet }}</p>
+                            {{ with $entry.Params.tags }}
+                                <div class="experience-card__tags">
+                                    {{ range first 3 . }}
+                                        <span>{{ . }}</span>
+                                    {{ end }}
+                                </div>
+                            {{ end }}
+                        </a>
+                    {{ end }}
+                </div>
+                <p class="home-experiences__legend">
+                    / total logs: {{ printf "%03d" $allLogs }}
+                    {{ if gt $allLogs (len $experiencePages) }}
+                        <span>showing latest {{ len $experiencePages }} · <a href="/page/archives/">open archive</a></span>
+                    {{ end }}
+                </p>
+            </section>
+        {{ end }}
 
-    {{ partial "article/components/related-content" . }}
+        <div class="home-divider" aria-hidden="true">
+            <span class="home-divider__label">/origin/</span>
+        </div>
+        <section class="home-chronicle" id="chronicle">
+            <div class="home-chronicle__shell">
+                <div class="home-chronicle__frame" aria-hidden="true">
+                    <span class="home-chronicle__frame-line"></span>
+                    <span class="home-chronicle__frame-line"></span>
+                    <span class="home-chronicle__frame-line"></span>
+                    <span class="home-chronicle__frame-line"></span>
+                </div>
+                <header class="home-section-header home-section-header--center">
+                    <span class="home-section-label">whoami</span>
+                    <h2>origin file</h2>
+                </header>
+                <div class="home-chronicle__content">
+                    <div class="home-chronicle__text">
+                        {{ .Content }}
+                    </div>
+                    <aside class="home-chronicle__callout">
+                        <div class="home-chronicle__callout-card">
+                            <span class="home-chronicle__callout-heading">core threads</span>
+                            <ul>
+                                <li>Supercomputing research with CINECA · Leonardo</li>
+                                <li>Immersive XR plugins and spatial storytelling</li>
+                                <li>AI systems tuned for human workflows</li>
+                                <li>Translating global experiences into technology</li>
+                            </ul>
+                        </div>
+                        <div class="home-chronicle__callout-card">
+                            <span class="home-chronicle__callout-heading">coordinates</span>
+                            <ul class="home-chronicle__meta">
+                                <li><span>Base</span><span>Trentino · Italy</span></li>
+                                <li><span>Signal</span><span>david.cavada.lab@gmail.com</span></li>
+                                <li><span>Languages</span><span>Italian · English</span></li>
+                            </ul>
+                        </div>
+                        <div class="home-chronicle__motd" aria-hidden="true">
+                            <span>motd ▸ remember: curiosity is a root shell.</span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
 
-    {{ if not (eq .Params.comments false) }}
-        {{ partial "comments/include" . }}
-    {{ end }}
+        {{ with .Params.links }}
+            <div class="home-divider" aria-hidden="true">
+                <span class="home-divider__label">/channels/</span>
+            </div>
+            <section class="home-channels" id="channels">
+                <header class="home-section-header">
+                    <span class="home-section-label">channels</span>
+                    <h2>signal outputs</h2>
+                    <p>Minimal feeds, clean pings. Every link is a live endpoint.</p>
+                </header>
+                <div class="channel-feed">
+                    {{ range . }}
+                        {{ $image := "" }}
+                        {{ with .image }}
+                            {{ $match := $.Resources.GetMatch . }}
+                            {{ if $match }}
+                                {{ $image = $match.RelPermalink }}
+                            {{ else }}
+                                {{ $image = (. | relURL) }}
+                            {{ end }}
+                        {{ end }}
+                        <a class="channel-row" href="{{ .website }}" target="_blank" rel="noopener">
+                            <div class="channel-row__primary">
+                                <span class="channel-row__label">{{ .title }}</span>
+                                <span class="channel-row__desc">{{ .description }}</span>
+                            </div>
+                            <div class="channel-row__meta">
+                                {{ if $image }}
+                                    <span class="channel-row__icon">
+                                        <img src="{{ $image }}" alt="{{ .alt | default .title }}" loading="lazy" decoding="async" />
+                                    </span>
+                                {{ end }}
+                                <span class="channel-row__arrow" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+                    {{ end }}
+                </div>
+                <p class="channel-feed__hint">tip: alt + click copies the signal endpoint.</p>
+            </section>
+        {{ end }}
+
+        <div class="home-divider" aria-hidden="true">
+            <span class="home-divider__label">/terminal/</span>
+        </div>
+        <section class="home-terminal" id="nav-terminal">
+            <header class="home-terminal__header">
+                <span class="home-terminal__label">mini terminal</span>
+                <span class="home-terminal__status" aria-live="polite">ready ▸ type `help`</span>
+            </header>
+            <form class="home-terminal__form">
+                <span class="home-terminal__prompt">~/site</span>
+                <input type="text" name="command" autocomplete="off" placeholder="cd modules | cd logs | cd channels | cd contact | cd ..">
+            </form>
+            <div class="home-terminal__history" aria-live="polite"></div>
+        </section>
+        <div class="home-divider" aria-hidden="true">
+            <span class="home-divider__label">/contact/</span>
+        </div>
+        <section class="home-footer-cta" id="contact">
+            <div class="home-footer-cta__wrap">
+                <div class="home-footer-cta__sphere" aria-hidden="true"></div>
+                <h2>open to new problems</h2>
+                <p>Send coordinates or encrypted notes. Collaboration requests welcome.</p>
+                <a class="home-button home-button--primary" href="mailto:david.cavada.lab@gmail.com">initiate contact()</a>
+                <span class="home-footer-cta__hint" aria-hidden="true">psst: run <code>nc david.cavada.net 2025</code></span>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        (function () {
+            const channelRows = document.querySelectorAll('.channel-row');
+            channelRows.forEach((row) => {
+                row.addEventListener('click', (event) => {
+                    if (event.altKey) {
+                        event.preventDefault();
+                        const href = row.getAttribute('href');
+                        if (navigator.clipboard && href) {
+                            navigator.clipboard.writeText(href).then(() => {
+                                row.classList.add('channel-row--copied');
+                                setTimeout(() => row.classList.remove('channel-row--copied'), 1200);
+                            });
+                        }
+                    }
+                });
+            });
+
+            const terminal = document.querySelector('.home-terminal');
+            if (terminal) {
+                const form = terminal.querySelector('.home-terminal__form');
+                const input = terminal.querySelector('input[name="command"]');
+                const history = terminal.querySelector('.home-terminal__history');
+                const status = terminal.querySelector('.home-terminal__status');
+                const routes = {
+                    modules: '#capabilities',
+                    logs: '#experiences',
+                    origin: '#chronicle',
+                    channels: '#channels',
+                    contact: '#contact',
+                    home: '#top'
+                };
+
+                const print = (message, tone = 'info') => {
+                    if (!history) return;
+                    const line = document.createElement('p');
+                    line.className = `home-terminal__line home-terminal__line--${tone}`;
+                    line.textContent = message;
+                    history.prepend(line);
+                };
+
+                form.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                    const raw = (input.value || '').trim();
+                    if (!raw) return;
+                    const cmd = raw.toLowerCase();
+                    input.value = '';
+
+                    if (cmd === 'help') {
+                        print('available: cd modules | cd logs | cd channels | cd contact | cd origin | cd .. | clear', 'info');
+                        status.textContent = 'help ▸ ok';
+                        return;
+                    }
+
+                    if (cmd === 'clear') {
+                        history.innerHTML = '';
+                        status.textContent = 'history cleared';
+                        return;
+                    }
+
+                    if (cmd === 'cd ..') {
+                        window.location.assign('/');
+                        return;
+                    }
+
+                    const match = cmd.match(/^cd\s+(\S+)$/);
+                    if (match) {
+                        const target = routes[match[1]];
+                        if (target) {
+                            window.location.hash = target;
+                            status.textContent = `cd ${match[1]} ▸ ok`;
+                        } else {
+                            status.textContent = `cd ${match[1]} ▸ unknown`;
+                            print(`command not found: cd ${match[1]}`, 'error');
+                        }
+                        return;
+                    }
+
+                    if (cmd === 'ls') {
+                        print(Object.keys(routes).map((k) => `./${k}`).join('  '), 'info');
+                        status.textContent = 'ls ▸ ok';
+                        return;
+                    }
+
+                    status.textContent = 'error ▸ unknown command';
+                    print(`command not found: ${cmd}`, 'error');
+                });
+            }
+        })();
+    </script>
 
     {{ partialCached "footer/footer" . }}
-
-    {{ partialCached "article/components/photoswipe" . }}
 {{ end }}

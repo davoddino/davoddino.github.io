@@ -6,28 +6,72 @@
 {{ define "right-sidebar" }}{{ end }}
 
 {{ define "main" }}
+    {{ $date := .Date }}
+    {{ $timeline := cond (gt $date.Unix 0) ($date.Format "02 Jan 2006") (now.Format "02 Jan 2006") }}
+    {{ $readingTime := .ReadingTime }}
+    {{ $payload := div (len .RawContent) 1024 }}
+    {{ $lastmod := cond (gt .Lastmod.Unix 0) .Lastmod (now) }}
+    {{ $checksum := substr (sha1 .Title) 0 8 }}
+    {{ $section := .Section | default "story" }}
     <article class="ireland-story">
+        {{ if or .Params.math .Site.Params.article.math }}
+            {{ partialCached "article/components/math.html" . }}
+        {{ end }}
+        <div class="ireland-story__background" aria-hidden="true">
+            <div class="ireland-story__matrix"></div>
+            <div class="ireland-story__scanlines"></div>
+        </div>
         <div class="ireland-story__inner">
-            {{ $date := .Date }}
-            {{ $timeline := cond (gt $date.Unix 0) ($date.Format "02 MMMM 2006") (now.Format "02 MMMM 2006") }}
             <header class="ireland-story__header">
-                <p class="ireland-story__timeline">{{ $timeline }}</p>
-                <h1>{{ .Title }}</h1>
+                <div class="ireland-story__terminal">
+                    <div class="ireland-story__terminal-header">
+                        <span class="ireland-story__led ireland-story__led--red" aria-hidden="true"></span>
+                        <span class="ireland-story__led ireland-story__led--amber" aria-hidden="true"></span>
+                        <span class="ireland-story__led ireland-story__led--green" aria-hidden="true"></span>
+                        <span class="ireland-story__terminal-path">~/{{ $section }}</span>
+                        <span class="ireland-story__terminal-hash">hash: {{ $checksum }}</span>
+                    </div>
+                    <div class="ireland-story__terminal-body" aria-live="polite">
+                        <p><span class="ireland-story__prompt">$</span> open {{ .Title | urlize }}</p>
+                        <p><span class="ireland-story__arrow">↳</span> {{ $timeline }} · {{ printf "%02d" $payload }}kb payload</p>
+                    </div>
+                </div>
+                <div class="ireland-story__meta">
+                    <span class="ireland-story__tag">section ▸ {{ $section }}</span>
+                    {{ if gt $readingTime 0 }}
+                        <span class="ireland-story__tag">runtime ▸ {{ printf "%d min" $readingTime }}</span>
+                    {{ end }}
+                </div>
+                <h1 class="ireland-story__title">{{ .Title }}</h1>
                 {{ with .Params.caption }}<p class="ireland-story__caption">{{ . }}</p>{{ end }}
             </header>
             {{ with .Params.heroImage }}
                 {{ $hero := $.Resources.GetMatch . }}
                 <figure class="ireland-story__figure">
                     {{ if $hero }}
-                        <img src="{{ $hero.RelPermalink }}" alt="{{ $.Params.heroAlt | default $.Title }}" loading="lazy" />
+                        <img src="{{ $hero.RelPermalink }}" alt="{{ $.Params.heroAlt | default $.Title }}" loading="lazy" decoding="async" />
                     {{ else }}
-                        <img src="{{ . | relURL }}" alt="{{ $.Params.heroAlt | default $.Title }}" loading="lazy" />
+                        <img src="{{ . | relURL }}" alt="{{ $.Params.heroAlt | default $.Title }}" loading="lazy" decoding="async" />
                     {{ end }}
-                    {{ with $.Params.heroCredit }}<figcaption>{{ . }}</figcaption>{{ end }}
+                    {{ with $.Params.heroCredit }}<figcaption class="ireland-story__figure-credit">{{ . }}</figcaption>{{ end }}
                 </figure>
             {{ end }}
-            <div class="ireland-story__content">
-                {{ .Content }}
+            <div class="ireland-story__layout">
+                <div class="ireland-story__content">
+                    {{ .Content }}
+                    <footer class="ireland-story__footer-meta">
+                        <span>checksum verified · {{ $checksum }}</span>
+                        <span>last update · {{ $lastmod.Format "02 Jan 2006 15:04" }}</span>
+                    </footer>
+                </div>
+                {{ $toc := .TableOfContents }}
+                {{ $tocItems := findRE "<li" $toc }}
+                {{ if gt (len $tocItems) 0 }}
+                    <aside class="ireland-story__toc" aria-label="On this page">
+                        <span class="ireland-story__toc-title">Navigation</span>
+                        {{ $toc | safeHTML }}
+                    </aside>
+                {{ end }}
             </div>
         </div>
     </article>

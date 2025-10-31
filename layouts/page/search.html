@@ -11,19 +11,30 @@
 {{ define "main" }}
     <article class="ireland-story">
         <div class="ireland-story__inner">
-            {{ $date := .Date }}
-            {{ $timeline := cond (gt $date.Unix 0) ($date.Format "02 MMMM 2006") (now.Format "02 MMMM 2006") }}
+            {{ $session := substr (sha1 (printf "search-%s" .Title)) 0 10 }}
             <header class="ireland-story__header">
-                <p class="ireland-story__timeline">{{ $timeline }}</p>
-                <h1>{{ .Title }}</h1>
+                <div class="ireland-story__terminal">
+                    <div class="ireland-story__terminal-header">
+                        <span class="ireland-story__led ireland-story__led--red" aria-hidden="true"></span>
+                        <span class="ireland-story__led ireland-story__led--amber" aria-hidden="true"></span>
+                        <span class="ireland-story__led ireland-story__led--green" aria-hidden="true"></span>
+                        <span class="ireland-story__terminal-path">~/search</span>
+                        <span class="ireland-story__terminal-hash">session: {{ $session }}</span>
+                    </div>
+                    <div class="ireland-story__terminal-body">
+                        <p><span class="ireland-story__prompt">$</span> grep "{{ .Title | urlize }}"</p>
+                        <p><span class="ireland-story__arrow">↳</span> type keywords, press enter, inspect results below</p>
+                    </div>
+                </div>
+                <h1 class="ireland-story__title">{{ .Title }}</h1>
                 {{ with (or .Params.caption .Params.description) }}<p class="ireland-story__caption">{{ . }}</p>{{ end }}
             </header>
 
-            <div class="ireland-story__content search-content">
-                <form action="{{ .RelPermalink }}" class="search-form story-search"{{ with .OutputFormats.Get "json" -}} data-json="{{ .RelPermalink }}"{{- end }}>
+            <div class="search-console">
+                <form action="{{ .RelPermalink }}" class="search-form search-form--matrix"{{ with .OutputFormats.Get "json" -}} data-json="{{ .RelPermalink }}"{{- end }}>
                     <p>
-                        <label>{{ T "search.title" }}</label>
-                        <input name="keyword" placeholder="{{ T `search.placeholder` }}" />
+                        <label for="search-keyword">{{ T "search.title" }}</label>
+                        <input id="search-keyword" name="keyword" placeholder="{{ T `search.placeholder` }}" />
                     </p>
 
                     <button title="{{ T `search.title` }}">
@@ -33,7 +44,7 @@
 
                 <div class="search-result">
                     <h3 class="search-result--title section-title"></h3>
-                    <div class="search-result--list article-list--compact"></div>
+                    <div class="search-result__list"></div>
                 </div>
             </div>
         </div>
