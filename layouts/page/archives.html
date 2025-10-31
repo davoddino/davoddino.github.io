@@ -3,48 +3,68 @@
 {{ define "right-sidebar" }}{{ end }}
 
 {{ define "main" }}
+    {{ $taxonomy := $.Site.GetPage "taxonomyTerm" "categories" }}
+    {{ $terms := $taxonomy.Pages }}
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+    {{ $filtered := ($pages | intersect $notHidden) }}
+    {{ $session := substr (sha1 (printf "archives-%d" (len $filtered))) 0 10 }}
+
     <article class="ireland-story">
         <div class="ireland-story__inner">
-            {{ $date := .Date }}
-            {{ $timeline := cond (gt $date.Unix 0) ($date.Format "02 MMMM 2006") (now.Format "02 MMMM 2006") }}
             <header class="ireland-story__header">
-                <p class="ireland-story__timeline">{{ $timeline }}</p>
-                <h1>{{ .Title }}</h1>
+                <div class="ireland-story__terminal">
+                    <div class="ireland-story__terminal-header">
+                        <span class="ireland-story__led ireland-story__led--red" aria-hidden="true"></span>
+                        <span class="ireland-story__led ireland-story__led--amber" aria-hidden="true"></span>
+                        <span class="ireland-story__led ireland-story__led--green" aria-hidden="true"></span>
+                        <span class="ireland-story__terminal-path">~/archives</span>
+                        <span class="ireland-story__terminal-hash">session: {{ $session }}</span>
+                    </div>
+                    <div class="ireland-story__terminal-body">
+                        <p><span class="ireland-story__prompt">$</span> index {{ .Title | urlize }}</p>
+                        <p><span class="ireland-story__arrow">↳</span> entries: {{ printf "%03d" (len $filtered) }} · categories: {{ printf "%02d" (len $terms) }}</p>
+                    </div>
+                </div>
+                <div class="ireland-story__meta">
+                    <span class="ireland-story__tag">years ▸ {{ len ($filtered.GroupByDate "2006") }}</span>
+                </div>
+                <h1 class="ireland-story__title">{{ .Title }}</h1>
                 {{ with (or .Params.caption .Params.description) }}<p class="ireland-story__caption">{{ . }}</p>{{ end }}
             </header>
 
-            <div class="ireland-story__content archives-content">
-                {{- $taxonomy := $.Site.GetPage "taxonomyTerm" "categories" -}}
-                {{- $terms := $taxonomy.Pages -}}
+            <div class="archives-console">
                 {{ if $terms }}
-                    <section class="archives-taxonomy">
-                        <h2>Categorie</h2>
-                        <div class="archives-taxonomy__grid">
-                            {{ range $terms }}
-                                <a class="archives-taxonomy__chip" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <section class="archives-console__section">
+                        <header class="archives-console__section-head">
+                            <span class="archives-console__label">taxonomy</span>
+                            <h2>category index</h2>
+                        </header>
+                        <div class="chip-grid">
+                            {{ range sort $terms "Title" }}
+                                <a class="chip-grid__chip" href="{{ .RelPermalink }}">#{{ .Title | urlize }}</a>
                             {{ end }}
                         </div>
                     </section>
                 {{ end }}
 
-                {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-                {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
-                {{ $filtered := ($pages | intersect $notHidden) }}
-
                 {{ range $filtered.GroupByDate "2006" }}
                     {{ $id := lower (replace .Key " " "-") }}
-                    <section class="archives-section" id="{{ $id }}">
-                        <h2><a href="{{ $.RelPermalink }}#{{ $id }}">{{ .Key }}</a></h2>
-                        <div class="archives-section__list">
+                    <section class="log-block" id="{{ $id }}">
+                        <header class="log-block__header">
+                            <h2>{{ .Key }}</h2>
+                            <span class="log-block__count">{{ len .Pages }} entries</span>
+                        </header>
+                        <div class="log-block__list">
                             {{ range .Pages }}
-                                <a class="story-list-card story-list-card--compact" href="{{ .RelPermalink }}">
-                                    <div class="story-list-card__meta">
-                                        <time>{{ .Date.Format "02 MMM" }}</time>
-                                    </div>
-                                    <div class="story-list-card__body">
-                                        <h2>{{ .Title }}</h2>
-                                        {{ with .Params.caption }}<p>{{ . }}</p>{{ end }}
-                                    </div>
+                                {{ $hash := substr (sha1 .Title) 0 6 }}
+                                <a class="log-card log-card--compact" href="{{ .RelPermalink }}">
+                                    <header class="log-card__header">
+                                        <span class="log-card__id">{{ .Date.Format "02 Jan" }}</span>
+                                        <span class="log-card__hash">ref {{ $hash }}</span>
+                                    </header>
+                                    <h3 class="log-card__title">{{ .Title }}</h3>
+                                    {{ with .Params.caption }}<p class="log-card__excerpt">{{ . }}</p>{{ end }}
                                 </a>
                             {{ end }}
                         </div>
