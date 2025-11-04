@@ -33,8 +33,7 @@
             <div class="search-console">
                 <form action="{{ .RelPermalink }}" class="search-form search-form--matrix"{{ with .OutputFormats.Get "json" -}} data-json="{{ .RelPermalink }}"{{- end }}>
                     <p>
-                        <label for="search-keyword">{{ T "search.title" }}</label>
-                        <input id="search-keyword" name="keyword" placeholder="{{ T `search.placeholder` }}" />
+                        <input id="search-keyword" name="keyword" aria-label="{{ T `search.title` }}" placeholder="{{ T `search.placeholder` }}" />
                     </p>
 
                     <button title="{{ T `search.title` }}">
